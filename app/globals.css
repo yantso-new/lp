@@ -144,7 +144,7 @@
 }
 
 .animate-marquee {
-  animation: marquee 15s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .animate-marquee-reverse {
@@ -158,11 +158,11 @@
 
 /* Work marquee - slower for larger images */
 .animate-work-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
 .animate-work-marquee-reverse {
-  animation: marquee-reverse 30s linear infinite;
+  animation: marquee-reverse 20s linear infinite;
 }
 
 .animate-work-marquee:hover,
