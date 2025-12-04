@@ -85,16 +85,13 @@ const projects: WorkProject[] = [
 export function Work() {
   return (
     <section id="work" className="relative py-24 md:py-32">
-      {/* Background */}
-      <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-slate-50 to-white" />
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+        <div className="mb-16 max-w-3xl">
+          <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Selected Work
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-slate-600">
+          <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
             A curated collection of projects where design meets functionality.
             Each project represents a unique challenge solved with creativity
             and precision.

@@ -1,15 +1,15 @@
+'use client';
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { LogoMarquee } from "@/components/sections/logo-marquee";
-import { WorkMarquee } from "@/components/sections/work-marquee";
+import { Waves } from "@/components/ui/wave-background";
 
 export function Hero() {
   return (
-    <>
-      <section
-        id="hero"
-        className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-32"
-      >
+    <section
+      id="hero"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-32"
+    >
         {/* Background gradient */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background" />
@@ -18,13 +18,22 @@ export function Hero() {
 
         {/* Grid pattern overlay */}
         <div
-          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.015]"
+          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.015] dark:opacity-[0.03]"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23000' stroke-width='1'%3E%3Cpath d='M0 0h60v60H0z'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23fff' stroke-width='1'%3E%3Cpath d='M0 0h60v60H0z'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
 
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+        {/* Wave background */}
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-25">
+          <Waves
+            strokeColor="currentColor"
+            backgroundColor="transparent"
+            className="h-full w-full"
+          />
+        </div>
+
+        <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
           {/* Badge */}
           <div className="mb-8 inline-flex items-center gap-2 rounded-full border bg-background/50 px-4 py-1.5 text-sm font-medium text-muted-foreground backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
@@ -63,16 +72,7 @@ export function Hero() {
             </Button>
           </div>
         </div>
-
-        {/* Logo Marquee - positioned at bottom */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <LogoMarquee />
-        </div>
       </section>
-
-      {/* Work Marquee - Two rows, opposite directions */}
-      <WorkMarquee className="-mt-4" />
-    </>
   );
 }
 

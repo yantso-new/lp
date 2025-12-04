@@ -169,3 +169,15 @@
 .animate-work-marquee-reverse:hover {
   animation-play-state: paused;
 }
+
+/* Cal.com Embed Styles */
+cal-inline {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+}
+
+cal-inline iframe {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}

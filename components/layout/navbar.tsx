@@ -89,10 +89,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-foreground text-background">
-            <span className="text-sm font-bold">P</span>
-          </div>
-          <span className="text-lg font-semibold tracking-tight">Portfolio</span>
+          <span className="text-lg font-semibold tracking-tight">yaniv tsoref</span>
         </a>
 
         {/* Desktop Navigation */}

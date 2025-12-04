@@ -18,6 +18,20 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Environment Variables
+
+Create a `.env.local` file in the root directory with the following variable:
+
+```env
+NEXT_PUBLIC_CALCOM_URL=https://cal.com/your-username
+```
+
+Replace `your-username` with your Cal.com username. The URL can be:
+- `https://cal.com/your-username` (will automatically use the embed version)
+- `https://cal.com/your-username/embed` (explicit embed URL)
+
+If this variable is not set, the contact section will display a placeholder message.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

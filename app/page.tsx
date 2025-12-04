@@ -2,6 +2,11 @@ import { Navbar } from "@/components/layout/navbar";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
 import { Work } from "@/components/sections/work";
+import { LogoMarquee } from "@/components/sections/logo-marquee";
+import { WorkMarquee } from "@/components/sections/work-marquee";
+import { Services } from "@/components/sections/services";
+import { Pricing } from "@/components/sections/pricing";
+import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -9,55 +14,25 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        
+        {/* Marquee Section */}
+        <section className="relative">
+          <LogoMarquee />
+          <WorkMarquee />
+        </section>
+
         <About />
 
-        {/* Services Section */}
-        <section
-          id="services"
-          className="flex min-h-screen items-center justify-center border-t px-4"
-        >
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              Services
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Your services section content goes here.
-            </p>
-          </div>
-        </section>
+        <Services />
 
         {/* Work Section */}
         <Work />
 
         {/* Pricing Section */}
-        <section
-          id="pricing"
-          className="flex min-h-screen items-center justify-center border-t px-4"
-        >
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              Pricing
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Your pricing section content goes here.
-            </p>
-          </div>
-        </section>
+        <Pricing />
 
         {/* Contact Section */}
-        <section
-          id="contact"
-          className="flex min-h-screen items-center justify-center border-t bg-muted/30 px-4"
-        >
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl">
-              Contact
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Your contact section content goes here.
-            </p>
-          </div>
-        </section>
+        <Contact />
       </main>
     </>
   );
