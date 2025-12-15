@@ -114,6 +114,9 @@ export function WorkMarquee({ className }: WorkMarqueeProps) {
       <div className="relative flex flex-col gap-6 sm:gap-8">
         {/* Row 1 - Scrolls Right */}
         <div className="relative w-full overflow-hidden">
+          {/* Fade gradients at 10% of each side on large screens */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-[10%] bg-gradient-to-r from-background to-transparent xl:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-[10%] bg-gradient-to-l from-background to-transparent xl:block" />
 
           {/* Scrolling container - moves right */}
           <div className="flex w-max animate-work-marquee-reverse items-center gap-4 sm:gap-6">
@@ -130,6 +133,9 @@ export function WorkMarquee({ className }: WorkMarqueeProps) {
 
         {/* Row 2 - Scrolls Left */}
         <div className="relative w-full overflow-hidden">
+          {/* Fade gradients at 10% of each side on large screens */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 hidden w-[10%] bg-gradient-to-r from-background to-transparent xl:block" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 hidden w-[10%] bg-gradient-to-l from-background to-transparent xl:block" />
 
           {/* Scrolling container - moves left */}
           <div className="flex w-max animate-work-marquee items-center gap-4 sm:gap-6">
