@@ -79,7 +79,7 @@ export function WorkCard({ project, className }: WorkCardProps) {
           />
 
           {/* Overlay with CTA */}
-          <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/60 via-transparent to-transparent p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <div className="absolute inset-0 flex items-end justify-center bg-black/60 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
             <Button
               className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
               disabled

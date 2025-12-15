@@ -14,6 +14,7 @@ import {
   Layers,
   Search,
   BarChart3,
+  Users,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -66,6 +67,12 @@ const services = [
     description:
       "Helping define product vision, roadmap, and features that align with business goals.",
   },
+  {
+    icon: Users,
+    title: "Design Lead",
+    description:
+      "Leading design teams, establishing design processes, and driving design excellence across products and organizations.",
+  },
 ];
 
 const tools = [
@@ -89,11 +96,6 @@ export function Services() {
       id="services"
       className="relative overflow-hidden py-24 sm:py-32"
     >
-      {/* Background decorations */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 left-0 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.03] blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-[600px] w-[600px] translate-x-1/2 translate-y-1/2 rounded-full bg-primary/[0.02] blur-3xl" />
-      </div>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -108,11 +110,11 @@ export function Services() {
         </div>
 
         {/* Services Grid */}
-        <div className="columns-1 gap-8 space-y-8 sm:columns-2 lg:columns-3 lg:gap-12">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {services.map((service) => (
             <Card
               key={service.title}
-              className="group break-inside-avoid border-transparent bg-background/60 backdrop-blur-sm p-0 transition-all hover:border hover:border-border hover:shadow-md"
+              className="group border-transparent bg-background/60 backdrop-blur-sm p-0 gap-0 transition-all hover:shadow-md"
             >
               <CardHeader className="pb-2 px-0">
                 <div className="mb-3 flex items-center justify-start">
@@ -141,20 +143,19 @@ export function Services() {
           </div>
 
           {/* Tools Grid - 6 columns on large screens */}
-          <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="group flex items-center justify-center rounded-lg border border-transparent bg-background/40 p-6 transition-all hover:border-border hover:bg-background/60 hover:shadow-sm"
+                className="group flex items-center justify-center rounded-lg border border-transparent bg-background/40 p-4 transition-all hover:border-border hover:bg-background/60 hover:shadow-sm"
                 title={tool.name}
               >
-                <div className="relative flex h-12 w-full items-center justify-center">
+                <div className="relative h-9 w-full">
                   <Image
                     src={tool.src}
                     alt={tool.name}
-                    width={120}
-                    height={48}
-                    className="h-auto w-full max-w-[100px] object-contain opacity-50 transition-opacity duration-300 group-hover:opacity-90 dark:invert"
+                    fill
+                    className="object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 invert dark:invert-0"
                     unoptimized
                   />
                 </div>

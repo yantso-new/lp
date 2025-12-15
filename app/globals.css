@@ -117,17 +117,17 @@
     @apply border-border outline-ring/50;
   }
   html {
-    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header */
   }
   body {
     @apply bg-background text-foreground;
   }
 }
 
-/* Marquee animation */
+/* Marquee animation - seamless infinite loop */
 @keyframes marquee {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
@@ -139,7 +139,7 @@
     transform: translateX(-50%);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 }
 
@@ -158,16 +158,21 @@
 
 /* Work marquee - slower for larger images */
 .animate-work-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .animate-work-marquee-reverse {
-  animation: marquee-reverse 20s linear infinite;
+  animation: marquee-reverse 40s linear infinite;
 }
 
 .animate-work-marquee:hover,
 .animate-work-marquee-reverse:hover {
   animation-play-state: paused;
+}
+
+/* White logo filter */
+.logo-white {
+  filter: brightness(0) saturate(100%) invert(1) !important;
 }
 
 /* Cal.com Embed Styles */
@@ -178,6 +183,7 @@ cal-inline {
 }
 
 cal-inline iframe {
+  width: 100%;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
 }

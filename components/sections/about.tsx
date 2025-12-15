@@ -4,11 +4,6 @@ export function About() {
       id="about"
       className="relative overflow-hidden py-24 sm:py-32"
     >
-      {/* Background decorations */}
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-0 right-0 h-[600px] w-[600px] translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.03] blur-3xl" />
-        <div className="absolute bottom-0 left-0 h-[400px] w-[400px] -translate-x-1/2 translate-y-1/2 rounded-full bg-primary/[0.02] blur-3xl" />
-      </div>
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -74,15 +69,6 @@ export function About() {
             </p>
           </div>
 
-          <div className="break-inside-avoid border-b border-border pb-8">
-            <h3 className="mb-3 text-lg font-semibold tracking-tight">
-              Remote‑first
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              In EU time from Bensafrim, Faro, Portugal.
-            </p>
-          </div>
-
           <div className="break-inside-avoid pb-8">
             <h3 className="mb-3 text-lg font-semibold tracking-tight">
               Focus areas
@@ -91,6 +77,25 @@ export function About() {
               SaaS & internal tools, wellness & yoga tech, and AI‑assisted
               workflows.
             </p>
+          </div>
+        </div>
+
+        {/* Worked With Section */}
+        <div className="mt-16">
+          <h3 className="mb-12 text-2xl font-bold tracking-tight sm:text-3xl">
+            Worked with
+          </h3>
+          <div className="grid grid-cols-3 gap-8 sm:grid-cols-4 lg:grid-cols-5">
+            {/* Logo placeholders - 15 total (3 rows × 5 cols) */}
+            {Array.from({ length: 15 }).map((_, idx) => (
+              <div
+                key={idx}
+                className="flex items-center justify-center opacity-50 transition-opacity duration-300 hover:opacity-80"
+              >
+                {/* Logo will go here */}
+                <div className="h-8 w-24 rounded bg-muted" />
+              </div>
+            ))}
           </div>
         </div>
       </div>

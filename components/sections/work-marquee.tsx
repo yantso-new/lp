@@ -21,14 +21,14 @@ const worksRow1: WorkItem[] = [
   {
     id: "work-2",
     title: "E-commerce Platform",
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&q=80",
+    src: "/assets/generate_modal.png",
     alt: "E-commerce Platform Design",
   },
   {
     id: "work-3",
-    title: "Health App",
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop&q=80",
-    alt: "Health App Interface",
+    title: "Nanit Smart Baby Camera",
+    src: "/assets/work_images/Nanit.png",
+    alt: "Nanit Smart Baby Camera",
   },
   {
     id: "work-4",
@@ -97,7 +97,7 @@ function WorkCard({ work }: { work: WorkItem }) {
           sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, 400px"
         />
         {/* Overlay on hover */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
         <div className="absolute bottom-0 left-0 right-0 p-4 opacity-0 transition-all duration-300 group-hover:opacity-100">
           <h3 className="text-sm font-semibold text-white sm:text-base">
             {work.title}
@@ -110,16 +110,13 @@ function WorkCard({ work }: { work: WorkItem }) {
 
 export function WorkMarquee({ className }: WorkMarqueeProps) {
   return (
-    <section className={cn("py-12 sm:py-16", className)}>
+    <section className={cn("pt-8 pb-0", className)}>
       <div className="relative flex flex-col gap-6 sm:gap-8">
         {/* Row 1 - Scrolls Right */}
         <div className="relative w-full overflow-hidden">
-          {/* Subtle gradient masks */}
-          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-background/80 to-transparent sm:w-16 lg:w-24" />
-          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-background/80 to-transparent sm:w-16 lg:w-24" />
 
           {/* Scrolling container - moves right */}
-          <div className="flex animate-work-marquee-reverse items-center gap-4 sm:gap-6">
+          <div className="flex w-max animate-work-marquee-reverse items-center gap-4 sm:gap-6">
             {/* First set */}
             {worksRow1.map((work) => (
               <WorkCard key={`${work.id}-1`} work={work} />
@@ -133,12 +130,9 @@ export function WorkMarquee({ className }: WorkMarqueeProps) {
 
         {/* Row 2 - Scrolls Left */}
         <div className="relative w-full overflow-hidden">
-          {/* Subtle gradient masks */}
-          <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-12 bg-gradient-to-r from-background/80 to-transparent sm:w-16 lg:w-24" />
-          <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-12 bg-gradient-to-l from-background/80 to-transparent sm:w-16 lg:w-24" />
 
           {/* Scrolling container - moves left */}
-          <div className="flex animate-work-marquee items-center gap-4 sm:gap-6">
+          <div className="flex w-max animate-work-marquee items-center gap-4 sm:gap-6">
             {/* First set */}
             {worksRow2.map((work) => (
               <WorkCard key={`${work.id}-1`} work={work} />

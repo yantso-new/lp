@@ -8,24 +8,19 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pt-16 pb-32"
+      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 md:px-8 pt-16 pb-32"
     >
-        {/* Background gradient */}
-        <div className="pointer-events-none absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/5 via-background to-background" />
-          <div className="absolute top-1/4 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-primary/5 blur-3xl" />
-        </div>
 
         {/* Grid pattern overlay */}
         <div
-          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.015] dark:opacity-[0.03]"
+          className="pointer-events-none absolute inset-0 -z-10 opacity-[0.015] dark:opacity-[0.03] px-0 md:px-8"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23fff' stroke-width='1'%3E%3Cpath d='M0 0h60v60H0z'/%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
 
         {/* Wave background */}
-        <div className="pointer-events-none absolute inset-0 -z-10 opacity-25">
+        <div className="pointer-events-none absolute inset-0 -z-10 opacity-25 px-0 md:px-8">
           <Waves
             strokeColor="currentColor"
             backgroundColor="transparent"
@@ -47,7 +42,7 @@ export function Hero() {
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             I design and build
             <br />
-            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground bg-clip-text">
+            <span>
               beautiful products
             </span>
           </h1>
