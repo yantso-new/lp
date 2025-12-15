@@ -56,20 +56,10 @@ export function SmoothScroll() {
       }
     };
 
-    // Handle programmatic scrolls
-    const handleScroll = () => {
-      // This ensures smooth scrolling even for programmatic scrolls
-      if (window.scrollBehavior !== "smooth") {
-        // Fallback for browsers that don't support smooth scroll
-      }
-    };
-
     document.addEventListener("click", handleClick);
-    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       document.removeEventListener("click", handleClick);
-      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
