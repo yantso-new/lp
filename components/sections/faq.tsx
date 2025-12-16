@@ -36,6 +36,26 @@ const faqs = [
     answer:
       'I use modern tools and technologies including Figma for design, React and Next.js for development, and platforms like Webflow, Framer, and AI-powered tools for rapid prototyping. I also leverage no-code/low-code solutions when appropriate to ship faster without compromising quality.',
   },
+  {
+    question: 'Design vs. Development: Can I hire you for just one?',
+    answer:
+      'Absolutely. While my unique value lies in bridging the gap between design and code, I am happy to integrate with your existing setup. You can engage me solely for high-fidelity UI/UX design deliverables to hand off to your team, or hire me to build a pixel-perfect frontend from designs you already have.',
+  },
+  {
+    question: 'How do we communicate? Do we need meetings?',
+    answer:
+      'I prioritize asynchronous communication (via email, Slack, or project boards) to maximize focus time and delivery speed. However, I offer a complimentary 15-minute discovery call to discuss your needs, and I am always available to sync if a complex issue requires a direct conversation.',
+  },
+  {
+    question: 'How does the monthly subscription/retainer work?',
+    answer:
+      'The retainer is a recurring monthly subscription that guarantees my availability for your project. It is paid upfront at the start of each cycle. You can cancel the subscription at any time, effective for the following month. Because I reserve a dedicated block of time specifically for you, I cannot offer refunds once a billing cycle has started.',
+  },
+  {
+    question: 'Do you do websites as well?',
+    answer:
+      'Yes. I design and build websites at any scale. Whether you need a single high-conversion landing page, a corporate marketing site, or a complex, data-rich e-commerce store, I use modern frameworks to ensure your site is fast, scalable, and manageable.',
+  },
 ];
 
 export function FAQ() {

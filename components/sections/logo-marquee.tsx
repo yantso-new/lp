@@ -50,8 +50,8 @@ const logos: Logo[] = [
   {
     name: "MobileOdt",
     src: "/logos/mobile_odt_logo.png",
-    width: 150,
-    height: 46,
+    width: 188,
+    height: 58,
     className: "h-6 sm:h-7",
   },
   {
