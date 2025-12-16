@@ -50,7 +50,7 @@ export function WorkCard({ project, className }: WorkCardProps) {
         </div>
 
         {/* Title */}
-        <CardTitle className="text-center text-lg font-semibold leading-snug md:text-xl">
+        <CardTitle className="text-center text-lg font-semibold leading-snug md:text-xl min-h-[3.5rem] md:min-h-[3.75rem] flex items-start justify-center">
           {project.title}
         </CardTitle>
 
@@ -84,7 +84,7 @@ export function WorkCard({ project, className }: WorkCardProps) {
               className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
               disabled
             >
-              Coming Soon
+              Case Study Coming Soon
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

@@ -16,7 +16,6 @@ import {
   BarChart3,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 
 const services = [
   {
@@ -75,20 +74,20 @@ const services = [
   },
 ];
 
-const tools = [
-  { name: "Loveable", src: "/logos/loveable.svg" },
-  { name: "v0", src: "/logos/v0.svg" },
-  { name: "Cursor", src: "/logos/cursor.svg" },
-  { name: "Supabase", src: "/logos/supabase.svg" },
-  { name: "Nordcraft", src: "/logos/nordcraft.svg" },
-  { name: "Webflow", src: "/logos/webflow.svg" },
-  { name: "Framer", src: "/logos/framer.svg" },
-  { name: "Figma", src: "/logos/figma.svg" },
-  { name: "n8n", src: "/logos/n8n.svg" },
-  { name: "Make", src: "/logos/make.svg" },
-  { name: "Xano", src: "/logos/xano.svg" },
-  { name: "Next.js", src: "/logos/nextjs.svg" },
-];
+// const tools = [
+//   { name: "Loveable", src: "/logos/loveable.svg" },
+//   { name: "v0", src: "/logos/v0.svg" },
+//   { name: "Cursor", src: "/logos/cursor.svg" },
+//   { name: "Supabase", src: "/logos/supabase.svg" },
+//   { name: "Nordcraft", src: "/logos/nordcraft.svg" },
+//   { name: "Webflow", src: "/logos/webflow.svg" },
+//   { name: "Framer", src: "/logos/framer.svg" },
+//   { name: "Figma", src: "/logos/figma.svg" },
+//   { name: "n8n", src: "/logos/n8n.svg" },
+//   { name: "Make", src: "/logos/make.svg" },
+//   { name: "Xano", src: "/logos/xano.svg" },
+//   { name: "Next.js", src: "/logos/nextjs.svg" },
+// ];
 
 export function Services() {
   return (
@@ -131,8 +130,8 @@ export function Services() {
           ))}
         </div>
 
-        {/* Tools Section */}
-        <div className="mt-24 sm:mt-32">
+        {/* Tools Section - Hidden */}
+        {/* <div className="mt-24 sm:mt-32">
           <div className="mb-12 max-w-3xl">
             <h3 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl">
               Tools & Technologies
@@ -142,7 +141,6 @@ export function Services() {
             </p>
           </div>
 
-          {/* Tools Grid - 6 columns on large screens */}
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {tools.map((tool) => (
               <div
@@ -162,7 +160,7 @@ export function Services() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

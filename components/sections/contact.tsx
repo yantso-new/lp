@@ -6,13 +6,11 @@ import { useEffect } from "react";
 export function Contact() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: "15-min-intro" });
-      cal("ui", {
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
+      const cal = await getCalApi({ namespace: "website-booking" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
   }, []);
+
   return (
     <section
       id="contact"
@@ -33,8 +31,8 @@ export function Contact() {
         {/* Cal.com Embed */}
         <div className="mx-auto max-w-4xl">
           <Cal
-            namespace="15-min-intro"
-            calLink="yaniv-tsoref/15-min-intro"
+            namespace="website-booking"
+            calLink="yaniv-tsoref/website-booking"
             style={{ width: "100%", height: "100%", overflow: "scroll" }}
             config={{ layout: "month_view" }}
           />

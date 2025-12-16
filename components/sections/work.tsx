@@ -9,7 +9,7 @@ const projects: WorkProject[] = [
     logo: (
       <div className="flex items-center gap-2">
         <Image
-          src="/logos/wix.svg"
+          src="/logos/64c3ea08a194830383e36ce9_Wix.png"
           alt="Wix"
           width={80}
           height={32}
@@ -17,68 +17,68 @@ const projects: WorkProject[] = [
         />
       </div>
     ),
-    title: "Revolutionizing E-commerce Management - Wix Coupons Dashboard",
-    tags: ["UX Design", "Design Lead", "Design Systems", "SaaS"],
-    image: "/assets/wix-coupons-dashboard.png",
+    title: "Payments, CRM and E-commerce for hunderds of millions of users",
+    tags: ["UX Design", "Design Lead", "Design Systems", "SaaS", "strategy"],
+    image: "/assets/work_cards_imgs/wix_payments.png",
     variant: "light",
     highlight: "Over 250 million users worldwide",
   },
   {
-    id: "nanit",
+    id: "parcela_ja",
     logo: (
       <div className="flex items-center gap-3">
         <Image
-          src="/logos/nanit.svg"
-          alt="Nanit"
+          src="/logos/logo_parcelaja_com-unibanco_white 1.png"
+          alt="Parcela Já"
           width={120}
           height={36}
           className="h-9 w-auto"
         />
       </div>
     ),
-    title: "Smart Baby Monitoring - Designing the Future of Parenting",
-    tags: ["Mobile App", "UI Design", "IoT"],
-    image: "/assets/Gemini_Generated_Image_aiilq7aiilq7aiil.png",
+    title: "A new instore payment experience",
+    tags: ["Mobile App", "UI Design", "UX Design", "Fintech", "Strategy"],
+    image: "/assets/work_cards_imgs/parcela_ja.png",
     variant: "dark",
-    highlight: "Award-winning baby tech innovation",
+    highlight: "Leading payments platform",
   },
   {
-    id: "cybereason",
+    id: "mobile_odt",
     logo: (
       <div className="flex items-center gap-2">
         <Image
-          src="/logos/cybereason.svg"
-          alt="Cybereason"
-          width={140}
-          height={32}
+          src="/logos/mobile_odt_logo.png"
+          alt="Mobile ODT"
+          width={280}
+          height={64}
           className="h-7 w-auto brightness-0 invert"
         />
       </div>
     ),
-    title: "Enterprise Cybersecurity Platform - Threat Detection Dashboard",
-    tags: ["Enterprise", "Data Visualization", "UI Design"],
-    image: "/assets/wix-coupons-dashboard.png",
+    title: "High Technology for Women’s Health",
+    tags: ["Design Lead", "UX Design", "IOT", "HealthTech", "Strategy"],
+    image: "/assets/work_cards_imgs/mobile_odt2.png",
     variant: "dark",
-    highlight: "Protecting Fortune 500 companies",
+    highlight: "Saving Women's lives daily",
   },
   {
-    id: "earnix",
+    id: "Hyperad",
     logo: (
       <div className="flex items-center gap-2">
         <Image
-          src="/logos/earnix.png"
-          alt="Earnix"
+          src="/logos/hyperad.png"
+          alt="Hyperad"
           width={100}
           height={32}
           className="h-7 w-auto"
         />
       </div>
     ),
-    title: "AI-Powered Pricing Platform - Insurance & Banking Solutions",
-    tags: ["SaaS", "Enterprise", "Analytics"],
-    image: "/assets/Gemini_Generated_Image_aiilq7aiilq7aiil.png",
+    title: "Automate ad creation with data driven insights and on brand execution.",
+    tags: ["MVP", "GenAI", "ADtech"],
+    image: "/assets/work_cards_imgs/hyperad.png",
     variant: "light",
-    highlight: "Serving 100+ global financial institutions",
+    highlight: "1 Million Dollars in Funding",
   },
 ];
 

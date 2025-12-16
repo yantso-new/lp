@@ -40,11 +40,7 @@ export function Hero() {
 
           {/* Headline */}
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            I design and build
-            <br />
-            <span>
-              beautiful products
-            </span>
+            Fuzzy idea to a beautiful live product
           </h1>
 
           {/* Subheadline */}
@@ -58,12 +54,12 @@ export function Hero() {
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button asChild size="lg" className="group">
               <a href="#contact">
-                Book a call
+                Book Free Discovery Call
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="#work">View my work</a>
+              <a href="#pricing">See Pricing & Packages</a>
             </Button>
           </div>
         </div>

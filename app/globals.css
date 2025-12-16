@@ -156,7 +156,7 @@
   animation-play-state: paused;
 }
 
-/* Work marquee - slower for larger images */
+/* Work marquee - no hover interaction */
 .animate-work-marquee {
   animation: marquee 40s linear infinite;
 }
@@ -165,9 +165,10 @@
   animation: marquee-reverse 40s linear infinite;
 }
 
+/* Prevent hover from pausing work marquee */
 .animate-work-marquee:hover,
 .animate-work-marquee-reverse:hover {
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 /* White logo filter */
