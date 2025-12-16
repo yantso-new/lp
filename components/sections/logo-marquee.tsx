@@ -48,18 +48,11 @@ const logos: Logo[] = [
     className: "h-6 sm:h-7",
   },
   {
-    name: "CyberReason",
-    src: "/logos/64c3cacbbb6faf563c8805d9_CyberReason.png",
-    width: 130,
-    height: 40,
-    className: "h-6 sm:h-7",
-  },
-  {
     name: "MobileOdt",
     src: "/logos/mobile_odt_logo.png",
-    width: 182,
-    height: 56,
-    className: "h-8 sm:h-10",
+    width: 150,
+    height: 46,
+    className: "h-6 sm:h-7",
   },
   {
     name: "Parcela Ja",
