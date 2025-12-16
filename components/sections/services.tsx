@@ -98,7 +98,7 @@ export function Services() {
 
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="mb-16 max-w-3xl">
+        <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Services
           </h2>

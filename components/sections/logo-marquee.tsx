@@ -90,64 +90,97 @@ export function LogoMarquee({ className }: LogoMarqueeProps) {
           <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-16 bg-linear-to-l from-background to-transparent sm:w-32" />
 
           {/* Scrolling logos wrapper */}
-          <div className="flex animate-marquee items-center gap-12 sm:gap-16">
+          <div
+            className="flex w-max animate-marquee items-center will-change-transform"
+            style={{ animationDuration: "60s" }}
+          >
             {/* First set of logos */}
-            {logos.map((logo, idx) => (
-              <div
-                key={`logo-1-${idx}`}
-                className="flex shrink-0 items-center justify-center"
-                title={logo.name}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className={cn(
-                    "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
-                    logo.className
-                  )}
-                />
-              </div>
-            ))}
+            <div className="flex shrink-0 items-center gap-12 pr-12 sm:gap-16 sm:pr-16">
+              {logos.map((logo, idx) => (
+                <div
+                  key={`logo-1-${idx}`}
+                  className="flex shrink-0 items-center justify-center"
+                  title={logo.name}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={logo.width}
+                    height={logo.height}
+                    className={cn(
+                      "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
+                      logo.className
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
+
             {/* Duplicate set for seamless infinite loop */}
-            {logos.map((logo, idx) => (
-              <div
-                key={`logo-2-${idx}`}
-                className="flex shrink-0 items-center justify-center"
-                title={logo.name}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className={cn(
-                    "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
-                    logo.className
-                  )}
-                />
-              </div>
-            ))}
+            <div className="flex shrink-0 items-center gap-12 pr-12 sm:gap-16 sm:pr-16">
+              {logos.map((logo, idx) => (
+                <div
+                  key={`logo-2-${idx}`}
+                  className="flex shrink-0 items-center justify-center"
+                  title={logo.name}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={logo.width}
+                    height={logo.height}
+                    className={cn(
+                      "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
+                      logo.className
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
+
             {/* Third set for seamless loop without gaps */}
-            {logos.map((logo, idx) => (
-              <div
-                key={`logo-3-${idx}`}
-                className="flex shrink-0 items-center justify-center"
-                title={logo.name}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className={cn(
-                    "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
-                    logo.className
-                  )}
-                />
-              </div>
-            ))}
+            <div className="flex shrink-0 items-center gap-12 pr-12 sm:gap-16 sm:pr-16">
+              {logos.map((logo, idx) => (
+                <div
+                  key={`logo-3-${idx}`}
+                  className="flex shrink-0 items-center justify-center"
+                  title={logo.name}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={logo.width}
+                    height={logo.height}
+                    className={cn(
+                      "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
+                      logo.className
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Fourth set for seamless loop on wide screens */}
+            <div className="flex shrink-0 items-center gap-12 pr-12 sm:gap-16 sm:pr-16">
+              {logos.map((logo, idx) => (
+                <div
+                  key={`logo-4-${idx}`}
+                  className="flex shrink-0 items-center justify-center"
+                  title={logo.name}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.name}
+                    width={logo.width}
+                    height={logo.height}
+                    className={cn(
+                      "w-auto object-contain transition-opacity duration-300 hover:opacity-80",
+                      logo.className
+                    )}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

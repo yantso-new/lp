@@ -39,8 +39,9 @@ export function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          I turn fuzzy ideas into beautiful, live products.
+        <h1 className="mb-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
+          I turn fuzzy ideas
+          <br className="hidden sm:inline" /> into beautiful, live products.
         </h1>
 
         {/* Subheadline */}
