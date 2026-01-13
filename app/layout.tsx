@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://yanivtsoref.com"),
   title: "Yaniv Tsoref | Fractional Product Designer & Builder",
   description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
   openGraph: {
