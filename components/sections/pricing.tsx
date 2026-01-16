@@ -96,11 +96,10 @@ export function Pricing() {
             return (
               <Card
                 key={tier.name}
-                className={`group relative flex flex-col bg-background/60 backdrop-blur-sm transition-all hover:border-border hover:shadow-lg ${
-                  tier.popular
-                    ? "border-primary/20 shadow-md lg:scale-105"
-                    : "border-border/50"
-                }`}
+                className={`group relative flex flex-col bg-background/60 backdrop-blur-sm transition-all hover:border-border hover:shadow-lg ${tier.popular
+                  ? "border-primary/20 shadow-md lg:scale-105"
+                  : "border-border/50"
+                  }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -163,12 +162,13 @@ export function Pricing() {
 
         {/* Custom Project Card */}
         <Card className="border-primary/20 bg-background">
-          <CardContent className="pt-6">
-            <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+          <CardContent className="p-6">
+            <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:justify-between sm:text-left">
               <div className="flex-1">
                 <h3 className="mb-2 text-xl font-semibold">Custom Project</h3>
                 <p className="text-sm text-muted-foreground">
                   Have a complex product, enterprise needs, or something unique?
+                  <br />
                   Let's discuss a tailored solution that fits your specific
                   requirements and timeline.
                 </p>
