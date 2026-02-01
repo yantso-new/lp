@@ -15,22 +15,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yanivtsoref.com"),
+  metadataBase: new URL("https://yantso.com"),
   title: "Yaniv Tsoref | Fractional Product Designer & Builder",
   description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
   openGraph: {
     title: "Yaniv Tsoref | Fractional Product Designer & Builder",
     description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
-    url: "https://yanivtsoref.com", // update this with your actual domain when ready
-    siteName: "",
-    images: [
-      {
-        url: "/opengraph-image.png",
-        width: 1024,
-        height: 506,
-        alt: "Yaniv Tsoref | Fractional Product Designer & Builder",
-      },
-    ],
+    url: "https://yantso.com",
+    siteName: "Yaniv Tsoref",
     locale: "en_US",
     type: "website",
   },
@@ -38,7 +30,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yaniv Tsoref | Fractional Product Designer & Builder",
     description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
-    images: ["/opengraph-image.png"],
   },
 };
 
