@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
+import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         <SmoothScroll />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>
