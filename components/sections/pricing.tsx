@@ -41,7 +41,7 @@ const pricingTiers = [
       "Max 2 clients per month",
       "Design system maintenance",
       "Feature design & reviews",
-      "Team design guidance",
+      "Ongoing design guidance",
       "Design process optimization",
       "Priority support",
       "Flexible cancellation",

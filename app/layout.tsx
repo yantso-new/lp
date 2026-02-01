@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: "Yaniv Tsoref | Fractional Product Designer & Builder",
     description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
     url: "https://yanivtsoref.com", // update this with your actual domain when ready
-    siteName: "Yaniv Tsoref | Product Designer",
+    siteName: "",
     images: [
       {
         url: "/opengraph-image.png",
