@@ -34,6 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { CookieConsent } from "@/components/layout/cookie-consent";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +49,7 @@ export default function RootLayout({
         <SmoothScroll />
         {children}
         <Footer />
+        <CookieConsent />
         <Analytics />
       </body>
     </html>
