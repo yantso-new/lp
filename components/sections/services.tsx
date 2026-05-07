@@ -16,6 +16,7 @@ import {
   BarChart3,
   Users,
 } from "lucide-react";
+import Link from "next/link";
 
 const services = [
   {
@@ -23,18 +24,21 @@ const services = [
     title: "UX/UI Design",
     description:
       "User research, wireframing, and pixel-perfect designs that balance aesthetics with functionality.",
+    href: "/services/ux-ui-design",
   },
   {
     icon: Code,
     title: "Frontend Development",
     description:
       "Building responsive, performant interfaces with React, Next.js, and modern web technologies.",
+    href: "/services/frontend-development",
   },
   {
     icon: Rocket,
     title: "Rapid Prototyping",
     description:
       "From concept to clickable prototype in days. Fast iteration to validate ideas before full build.",
+    href: "/services/mvp-build",
   },
   {
     icon: Smartphone,
@@ -47,6 +51,7 @@ const services = [
     title: "Design Systems",
     description:
       "Creating scalable design systems and component libraries for consistent, maintainable products.",
+    href: "/services/design-systems",
   },
   {
     icon: Layers,
@@ -71,6 +76,7 @@ const services = [
     title: "Design Lead",
     description:
       "Leading design teams, establishing design processes, and driving design excellence across products and organizations.",
+    href: "/services/fractional-product-designer",
   },
 ];
 
@@ -110,24 +116,33 @@ export function Services() {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
-          {services.map((service) => (
-            <Card
-              key={service.title}
-              className="group border-transparent bg-background/60 backdrop-blur-sm p-0 gap-0 transition-all hover:shadow-md"
-            >
-              <CardHeader className="pb-2 px-0">
-                <div className="mb-3 flex items-center justify-start">
-                  <service.icon className="h-10 w-10 stroke-1 text-muted-foreground transition-colors group-hover:text-foreground" />
-                </div>
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-0 px-0">
-                <CardDescription className="text-sm leading-relaxed">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
-          ))}
+          {services.map((service) => {
+            const card = (
+              <Card
+                className="group h-full border-transparent bg-background/60 backdrop-blur-sm p-0 gap-0 transition-all hover:shadow-md"
+              >
+                <CardHeader className="pb-2 px-0">
+                  <div className="mb-3 flex items-center justify-start">
+                    <service.icon className="h-10 w-10 stroke-1 text-muted-foreground transition-colors group-hover:text-foreground" />
+                  </div>
+                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0 px-0">
+                  <CardDescription className="text-sm leading-relaxed">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            );
+
+            return service.href ? (
+              <Link key={service.title} href={service.href}>
+                {card}
+              </Link>
+            ) : (
+              <div key={service.title}>{card}</div>
+            );
+          })}
         </div>
 
         {/* Tools Section - Hidden */}
@@ -165,4 +180,3 @@ export function Services() {
     </section>
   );
 }
-

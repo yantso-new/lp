@@ -17,11 +17,12 @@ const projects: WorkProject[] = [
         />
       </div>
     ),
-    title: "Payments, CRM and E-commerce for hunderds of millions of users",
+    title: "Payments, CRM and E-commerce for hundreds of millions of users",
     tags: ["UX Design", "Design Lead", "Design Systems", "SaaS", "strategy"],
     image: "/assets/work_cards_imgs/wix_payments.png",
     variant: "light",
     highlight: "Over 250 million users worldwide",
+    href: "/case-studies/wix-coupons",
   },
   {
     id: "parcela_ja",
@@ -41,6 +42,7 @@ const projects: WorkProject[] = [
     image: "/assets/work_cards_imgs/parcela_ja.png",
     variant: "dark",
     highlight: "Leading payments platform",
+    href: "/case-studies/parcela-ja",
   },
   {
     id: "mobile_odt",
