@@ -16,19 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yantso.com"),
+  metadataBase: new URL("https://www.yantso.com"),
   title: {
-    default: "Yaniv Tsoref | Fractional Product Designer & Builder",
+    default: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
     template: "%s | Yaniv Tsoref",
   },
-  description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
+  description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Yaniv Tsoref | Fractional Product Designer & Builder",
-    description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
-    url: "https://yantso.com",
+    title: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
+    description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
+    url: "https://www.yantso.com",
     siteName: "Yaniv Tsoref",
     locale: "en_US",
     type: "website",
@@ -43,8 +43,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yaniv Tsoref | Fractional Product Designer & Builder",
-    description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
+    title: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
+    description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
     images: ["/opengraph-image"],
   },
 };

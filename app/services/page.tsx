@@ -61,7 +61,7 @@ export default function ServicesPage() {
 
         <div className="mt-16 border-t border-border pt-8">
           <Button asChild size="lg">
-            <a href="/#contact">Book a discovery call</a>
+            <Link href="/#contact">Book a discovery call</Link>
           </Button>
         </div>
       </section>

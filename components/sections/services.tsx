@@ -15,6 +15,7 @@ import {
   Search,
   BarChart3,
   Users,
+  ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -112,6 +113,13 @@ export function Services() {
             End-to-end design and development services to bring your product
             vision to life. From research to launch, I help you ship faster.
           </p>
+          <Link
+            href="/services"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
+          >
+            View all product design services
+            <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
         </div>
 
         {/* Services Grid */}

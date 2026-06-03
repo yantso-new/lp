@@ -69,11 +69,11 @@ export default async function ServicePage({ params }: ServicePageProps) {
     provider: {
       "@type": "Person",
       name: "Yaniv Tsoref",
-      url: "https://yantso.com",
+      url: "https://www.yantso.com",
     },
     areaServed: "Worldwide",
     serviceType: service.shortTitle,
-    url: `https://yantso.com/services/${service.slug}`,
+    url: `https://www.yantso.com/services/${service.slug}`,
   };
 
   return (
@@ -111,10 +111,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
             </p>
             <p className="mt-3 text-base leading-relaxed">{service.audience}</p>
             <Button asChild className="mt-6 w-full">
-              <a href="/#contact">
+              <Link href="/#contact">
                 Book a call
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
           </aside>
         </div>

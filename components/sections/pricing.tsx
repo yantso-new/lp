@@ -166,12 +166,12 @@ export function Pricing() {
             <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:justify-between sm:text-left">
               <div className="flex-1">
                 <h3 className="mb-2 text-xl font-semibold">Custom Project</h3>
-                <p className="text-sm text-muted-foreground">
-                  Have a complex product, enterprise needs, or something unique?
-                  <br />
-                  Let's discuss a tailored solution that fits your specific
-                  requirements and timeline.
-                </p>
+	                <p className="text-sm text-muted-foreground">
+	                  Have a complex product, enterprise needs, or something unique?
+	                  <br />
+	                  Let&apos;s discuss a tailored solution that fits your specific
+	                  requirements and timeline.
+	                </p>
               </div>
               <Button asChild variant="outline" className="group/btn shrink-0">
                 <a href="#contact">
@@ -186,4 +186,3 @@ export function Pricing() {
     </section>
   );
 }
-

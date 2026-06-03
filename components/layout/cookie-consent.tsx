@@ -3,8 +3,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
-import { cn } from "@/lib/utils";
-
 export function CookieConsent() {
     const [isVisible, setIsVisible] = useState(false);
 
@@ -40,7 +38,7 @@ export function CookieConsent() {
                     <div className="flex-1 text-center md:text-left">
                         <h3 className="text-lg font-semibold text-white mb-2">Cookie Preferences</h3>
                         <p className="text-sm text-gray-400 leading-relaxed">
-                            We use cookies to enhance your experience and analyze our traffic. By clicking "Accept", you consent to our use of cookies.
+                            We use cookies to enhance your experience and analyze our traffic. By clicking &quot;Accept&quot;, you consent to our use of cookies.
                         </p>
                     </div>
 

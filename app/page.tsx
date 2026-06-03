@@ -9,7 +9,7 @@ import { Pricing } from "@/components/sections/pricing";
 import { FAQ } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
 
-const siteUrl = "https://yantso.com";
+const siteUrl = "https://www.yantso.com";
 
 const structuredData = [
   {
@@ -47,6 +47,7 @@ const structuredData = [
     },
     areaServed: "Worldwide",
     serviceType: [
+      "Fractional Product Designer",
       "UX/UI Design",
       "Frontend Development",
       "Rapid Prototyping",

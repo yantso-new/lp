@@ -192,7 +192,7 @@ export default function WixCaseStudy() {
                             {/* Quote Block */}
                             <blockquote className="border-l-4 border-primary pl-6 py-4">
                                 <p className="text-xl italic text-foreground">
-                                    "This redesign fundamentally changed how our merchants approach promotions and marketing."
+                                    &quot;This redesign fundamentally changed how our merchants approach promotions and marketing.&quot;
                                 </p>
                                 <cite className="text-sm text-muted-foreground mt-3 block not-italic">
                                     — Product Manager, Wix Stores
@@ -235,7 +235,7 @@ export default function WixCaseStudy() {
                             </div>
                             <h3 className="text-lg font-semibold">Vertical Creation</h3>
                             <p className="text-muted-foreground text-sm leading-relaxed">
-                                The success of these promotional tools served as the catalyst for "Wix Promote," a dedicated business unit within Wix.
+                                The success of these promotional tools served as the catalyst for &quot;Wix Promote,&quot; a dedicated business unit within Wix.
                             </p>
                         </div>
 
@@ -264,13 +264,13 @@ export default function WixCaseStudy() {
                 {/* Next Case Study CTA */}
                 <section className="border-t border-border/50 pt-16">
                     <Link
-                        href="/case-studies/next-project"
+                        href="/case-studies/parcela-ja"
                         className="group flex items-center justify-between p-6 -mx-6 rounded-2xl hover:bg-accent/20 transition-colors"
                     >
                         <div>
                             <p className="text-sm text-muted-foreground mb-1">Next Case Study</p>
                             <p className="text-2xl font-bold group-hover:text-primary transition-colors">
-                                View More Work
+                                Parcela Ja fintech product design
                             </p>
                         </div>
                         <ArrowRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" aria-hidden="true" />

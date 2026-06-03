@@ -277,7 +277,7 @@ export default function ParcelaJaCaseStudy() {
                                 Parcela Já lets customers split purchases into up to <strong className="text-foreground">6 interest-free monthly instalments</strong> across physical and online stores in Portugal. No paperwork, instant approval.
                             </p>
                             <p>
-                                The mobile app was the user's key to everything — from signing up and verifying identity, to finding stores and paying at the point of sale.
+                                The mobile app was the user&apos;s key to everything — from signing up and verifying identity, to finding stores and paying at the point of sale.
                             </p>
                         </div>
                     </div>
@@ -396,7 +396,7 @@ export default function ParcelaJaCaseStudy() {
 
                         <blockquote className="border-l-4 border-primary pl-6 py-4">
                             <p className="text-lg italic text-foreground">
-                                "Payments at a counter happen in seconds — with a queue behind you and a merchant waiting. I stripped the flow to the minimum necessary steps."
+                                &quot;Payments at a counter happen in seconds — with a queue behind you and a merchant waiting. I stripped the flow to the minimum necessary steps.&quot;
                             </p>
                         </blockquote>
                     </div>

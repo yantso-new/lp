@@ -72,8 +72,8 @@ export function FAQ() {
             Frequently Asked Questions
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Everything you need to know about working together. Can't find the
-            answer you're looking for? Feel free to book a call.
+            Everything you need to know about working together. Can&apos;t find the
+            answer you&apos;re looking for? Feel free to book a call.
           </p>
         </div>
 

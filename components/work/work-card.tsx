@@ -97,7 +97,7 @@ export function WorkCard({ project, className }: WorkCardProps) {
                 className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
                 disabled
               >
-                Case Study Coming Soon
+                Project details on request
                 <ArrowRight className="h-4 w-4" />
               </Button>
             )}
@@ -120,7 +120,7 @@ export function WorkCard({ project, className }: WorkCardProps) {
                 className="gap-2 rounded-full bg-background text-foreground shadow-lg"
                 disabled
               >
-                Coming Soon
+                Details on request
                 <ArrowRight className="h-4 w-4" />
               </Button>
             )}

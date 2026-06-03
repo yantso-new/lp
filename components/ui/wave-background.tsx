@@ -48,33 +48,6 @@ export function Waves({
     const rafRef = useRef<number | null>(null)
     const boundingRef = useRef<DOMRect | null>(null)
 
-    // Initialization
-    useEffect(() => {
-        if (!containerRef.current || !svgRef.current) return
-
-        // Initialize noise generator
-        noiseRef.current = createNoise2D()
-
-        // Initialize size and lines
-        setSize()
-        setLines()
-
-        // Bind events
-        window.addEventListener('resize', onResize)
-        window.addEventListener('mousemove', onMouseMove)
-        containerRef.current.addEventListener('touchmove', onTouchMove, { passive: false })
-
-        // Start animation
-        rafRef.current = requestAnimationFrame(tick)
-
-        return () => {
-            if (rafRef.current) cancelAnimationFrame(rafRef.current)
-            window.removeEventListener('resize', onResize)
-            window.removeEventListener('mousemove', onMouseMove)
-            containerRef.current?.removeEventListener('touchmove', onTouchMove)
-        }
-    }, [])
-
     // Set SVG size
     const setSize = () => {
         if (!containerRef.current || !svgRef.current) return
@@ -303,6 +276,34 @@ export function Waves({
 
         rafRef.current = requestAnimationFrame(tick)
     }
+
+    // Initialization
+    useEffect(() => {
+        const container = containerRef.current
+        if (!container || !svgRef.current) return
+
+        // Initialize noise generator
+        noiseRef.current = createNoise2D()
+
+        // Initialize size and lines
+        setSize()
+        setLines()
+
+        // Bind events
+        window.addEventListener('resize', onResize)
+        window.addEventListener('mousemove', onMouseMove)
+        container.addEventListener('touchmove', onTouchMove, { passive: false })
+
+        // Start animation
+        rafRef.current = requestAnimationFrame(tick)
+
+        return () => {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current)
+            window.removeEventListener('resize', onResize)
+            window.removeEventListener('mousemove', onMouseMove)
+            container.removeEventListener('touchmove', onTouchMove)
+        }
+    }, [])
 
     return (
         <div

@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -11,7 +10,7 @@ export function Footer() {
                     <div className="max-w-xl">
                         <h2 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">Connect with Me</h2>
                         <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                            Have something else in mind? I'm always open to new projects and collaborations.
+                            Have something else in mind? I&apos;m always open to new projects and collaborations.
                         </p>
                         <Button
                             asChild

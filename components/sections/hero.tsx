@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Waves } from "@/components/ui/wave-background";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -40,15 +41,14 @@ export function Hero() {
 
         {/* Headline */}
         <h1 className="mb-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          I turn fuzzy ideas
-          <br className="hidden sm:inline" /> into beautiful, live products.
+          Fractional Product Designer
+          <br className="hidden sm:inline" /> & MVP Builder
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-          Crafting thoughtful digital experiences that blend aesthetics with
-          functionality. From concept to launch, I help startups and businesses
-          bring their vision to life.
+          I help startups turn fuzzy ideas into polished MVPs, UX/UI systems,
+          and live Next.js or no-code products that are ready for real users.
         </p>
 
         {/* CTA Buttons */}
@@ -60,11 +60,10 @@ export function Hero() {
             </a>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <a href="#pricing">See Pricing & Packages</a>
+            <Link href="/services">Explore Services</Link>
           </Button>
         </div>
       </div>
     </section>
   );
 }
-

@@ -37,7 +37,7 @@ const projects: WorkProject[] = [
         />
       </div>
     ),
-    title: "A new instore payment experience",
+    title: "A new in-store payment experience",
     tags: ["Mobile App", "UI Design", "UX Design", "Fintech", "Strategy"],
     image: "/assets/work_cards_imgs/parcela_ja.png",
     variant: "dark",

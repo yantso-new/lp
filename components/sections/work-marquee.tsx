@@ -50,49 +50,10 @@ const worksRow1: WorkItem[] = [
   },
   {
     id: "work-6",
-    title: "Be",
+    title: "Be Wellness Product Interface",
     src: "/assets/work_images/be.png",
-    alt: "Be",
+    alt: "Be wellness product interface design",
     aspectRatio: 1.776, // 3840/2162
-  },
-];
-
-// Row 2 - scrolls right
-const worksRow2: WorkItem[] = [
-  {
-    id: "work-6",
-    title: "Analytics Dashboard",
-    src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&q=80",
-    alt: "Analytics Dashboard",
-    aspectRatio: 1.5, // 600/400
-  },
-  {
-    id: "work-7",
-    title: "Wix Coupons Dashboard",
-    src: "/assets/wix-coupons-dashboard.png",
-    alt: "Wix Coupons Dashboard Design",
-    aspectRatio: 1.370, // 1184/864
-  },
-  {
-    id: "work-8",
-    title: "Productivity Suite",
-    src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=400&fit=crop&q=80",
-    alt: "Productivity Suite Interface",
-    aspectRatio: 1.5, // 600/400
-  },
-  {
-    id: "work-9",
-    title: "Real Estate App",
-    src: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop&q=80",
-    alt: "Real Estate Application",
-    aspectRatio: 1.5, // 600/400
-  },
-  {
-    id: "work-10",
-    title: "Social Platform",
-    src: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop&q=80",
-    alt: "Social Platform Design",
-    aspectRatio: 1.5, // 600/400
   },
 ];
 
@@ -148,4 +109,3 @@ export function WorkMarquee({ className }: WorkMarqueeProps) {
     </section>
   );
 }
-

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { servicePages } from "@/lib/service-pages";
 
-const siteUrl = "https://yantso.com";
+const siteUrl = "https://www.yantso.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
