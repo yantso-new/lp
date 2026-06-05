@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import { servicePages } from "@/lib/service-pages";
-
 const siteUrl = "https://www.yantso.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,25 +16,36 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${siteUrl}/case-studies/wix-coupons`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.7,
-    },
-    {
       url: `${siteUrl}/services`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${siteUrl}/work`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${siteUrl}/startups`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${siteUrl}/websites`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
+      url: `${siteUrl}/automations`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
   ];
 
-  const servicePageUrls: MetadataRoute.Sitemap = servicePages.map((service) => ({
-    url: `${siteUrl}/services/${service.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
-
-  return [...staticPages, ...servicePageUrls];
+  return staticPages;
 }

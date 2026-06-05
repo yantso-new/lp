@@ -1,9 +1,14 @@
 # Parcela Já — Screen Assets
 
-Drop your exported PNG/JPG screenshots here, named exactly as below.
+Current implemented assets:
+
+- `home-screen.png`        — Home (banner + search + nearby stores + deals)
+- `id-verified.png`        — Citizen Card verified confirmation
+- `transactions.png`       — Transactions (in progress + completed)
+
+Optional future exports can be added here and wired into the case study when available.
 
 ## Hero & Layout
-- `home-screen.png`        — Home (banner + search + nearby stores + deals)
 - `shop-nearby.png`        — Shop Nearby (map + stores + deals below)
 - `coupon-detail.png`      — Coupon detail (20% OFF ASOS)
 
@@ -11,7 +16,6 @@ Drop your exported PNG/JPG screenshots here, named exactly as below.
 - `language-select.png`    — Language selection modal
 - `passcode-login.png`     — Login with Passcode
 - `id-verify-start.png`    — Verify identity to complete payment
-- `id-verified.png`        — Citizen Card verified confirmation
 
 ## Discovery
 - `search-results-clothes.png`  — Search "Clothes" results
@@ -24,7 +28,6 @@ Drop your exported PNG/JPG screenshots here, named exactly as below.
 
 ## Payments & Account
 - `payment-methods.png`    — Payment Methods (Visa + Mastercard cards)
-- `transactions.png`       — Transactions (in progress + completed)
 - `order-complete.png`     — Order Completed screen
 - `my-account.png`         — My Account settings menu
 

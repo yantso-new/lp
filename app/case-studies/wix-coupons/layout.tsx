@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wix Coupons Product Design Case Study",
+  title: "Wix Stores Case Study Coming Soon",
   description:
-    "A product design case study on redesigning the Wix Stores coupon dashboard into a scalable promotional ecosystem for ecommerce merchants.",
+    "The Wix Stores ecommerce promotions and coupon dashboard case study is coming soon.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "/case-studies/wix-coupons",
   },
   openGraph: {
-    title: "Wix Coupons Product Design Case Study",
+    title: "Wix Stores Case Study Coming Soon",
     description:
-      "A product design case study on redesigning the Wix Stores coupon dashboard into a scalable promotional ecosystem for ecommerce merchants.",
+      "The Wix Stores ecommerce promotions and coupon dashboard case study is coming soon.",
     url: "/case-studies/wix-coupons",
-    type: "article",
+    type: "website",
     images: [
       {
         url: "/assets/work_images/wix_coupons.png",
@@ -24,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wix Coupons Product Design Case Study",
+    title: "Wix Stores Case Study Coming Soon",
     description:
-      "A product design case study on redesigning the Wix Stores coupon dashboard into a scalable promotional ecosystem for ecommerce merchants.",
+      "The Wix Stores ecommerce promotions and coupon dashboard case study is coming soon.",
     images: ["/assets/work_images/wix_coupons.png"],
   },
 };

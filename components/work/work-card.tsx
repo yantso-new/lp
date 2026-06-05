@@ -23,6 +23,8 @@ export interface WorkProject {
   variant: "light" | "dark";
   highlight?: string;
   href?: string;
+  ctaLabel?: string;
+  external?: boolean;
 }
 
 interface WorkCardProps {
@@ -87,10 +89,17 @@ export function WorkCard({ project, className }: WorkCardProps) {
                 asChild
                 className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
               >
-                <Link href={project.href}>
-                  Read case study
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                {project.external ? (
+                  <a href={project.href} target="_blank" rel="noopener noreferrer">
+                    {project.ctaLabel ?? "Visit site"}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <Link href={project.href}>
+                    {project.ctaLabel ?? "Read case study"}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
               </Button>
             ) : (
               <Button
@@ -110,10 +119,17 @@ export function WorkCard({ project, className }: WorkCardProps) {
                 asChild
                 className="gap-2 rounded-full bg-background text-foreground shadow-lg"
               >
-                <Link href={project.href}>
-                  Case Study
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
+                {project.external ? (
+                  <a href={project.href} target="_blank" rel="noopener noreferrer">
+                    {project.ctaLabel ?? "Visit site"}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <Link href={project.href}>
+                    {project.ctaLabel ?? "Case study"}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
               </Button>
             ) : (
               <Button

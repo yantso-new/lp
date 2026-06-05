@@ -18,16 +18,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.yantso.com"),
   title: {
-    default: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
+    default: "Yaniv Tsoref | Product Designer & Builder",
     template: "%s | Yaniv Tsoref",
   },
-  description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
+  description:
+    "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
-    description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
+    title: "Yaniv Tsoref | Product Designer & Builder",
+    description:
+      "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
     url: "https://www.yantso.com",
     siteName: "Yaniv Tsoref",
     locale: "en_US",
@@ -37,14 +39,15 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Yaniv Tsoref | Fractional Product Designer & Builder",
+        alt: "Yaniv Tsoref | Product Designer & Builder",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yaniv Tsoref | Fractional Product Designer & MVP Builder",
-    description: "Fractional product designer and builder helping startups turn ideas into polished MVPs, UX/UI systems, and live Next.js or no-code products.",
+    title: "Yaniv Tsoref | Product Designer & Builder",
+    description:
+      "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
     images: ["/opengraph-image"],
   },
 };

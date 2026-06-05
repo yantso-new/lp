@@ -434,26 +434,36 @@ export default function ParcelaJaCaseStudy() {
                         <div className="rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-border/50 p-8">
                             <PhoneRow screens={[
                                 { src: "/case-studies/parcela-ja/home-screen.png", alt: "App home showing store discovery and categories", label: "Home — store discovery" },
-                                { src: "/case-studies/parcela-ja/search-results-clothes.png", alt: "Search results for clothes showing Worten, Nike, Aldo, Adidas, H&M", label: "Search — live results" },
-                                { src: "/case-studies/parcela-ja/store-page-worten.png", alt: "Worten store page with address, deals section", label: "Store detail page" },
+                                { src: "/case-studies/parcela-ja/id-verified.png", alt: "Phone number verified confirmation", label: "Trust — verified account" },
+                                { src: "/case-studies/parcela-ja/transactions.png", alt: "Transactions screen showing in progress and completed instalments", label: "Wallet — instalments" },
                             ]} />
                         </div>
 
                         {/* Coupon detail callout */}
                         <div className="rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-border/50 p-8">
-                            <div className="flex flex-col md:flex-row gap-8 items-center">
-                                <div className="md:w-1/2 space-y-4">
+                            <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_280px] md:items-center">
+                                <div className="space-y-4">
                                     <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Loyalty & Retention</p>
                                     <h4 className="text-lg font-semibold text-foreground">Exclusive Deals</h4>
                                     <p className="text-muted-foreground leading-relaxed text-sm">
                                         Parcela Já coupons surface inside the app — tied to specific merchants, with clear expiry, minimum spend, and a direct CTA to the store page. A key retention hook that kept users returning to discover new deals.
                                     </p>
                                 </div>
-                                <div className="md:w-1/2 flex justify-center">
-                                    <PhoneFrame
-                                        src="/case-studies/parcela-ja/coupon-detail.png"
-                                        alt="Coupon detail screen showing Worten 20% off deal"
-                                    />
+                                <div className="rounded-2xl border border-border/60 bg-background/50 p-6">
+                                    <ul className="space-y-4 text-sm text-muted-foreground">
+                                        <li className="border-b border-border/50 pb-4">
+                                            <span className="block font-medium text-foreground">Merchant context</span>
+                                            Store details, location, and online/offline availability.
+                                        </li>
+                                        <li className="border-b border-border/50 pb-4">
+                                            <span className="block font-medium text-foreground">Deal clarity</span>
+                                            Discount, expiry, minimum spend, and eligibility in one place.
+                                        </li>
+                                        <li>
+                                            <span className="block font-medium text-foreground">Return path</span>
+                                            A direct route back to the merchant page and checkout decision.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>

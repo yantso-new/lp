@@ -7,54 +7,54 @@ import {
 
 const faqs = [
   {
-    question: 'What is your typical project timeline?',
+    question: 'What kinds of projects are the best fit?',
     answer:
-      'Project timelines vary based on scope and complexity. A simple landing page can be delivered in 1-2 weeks, while a full product design and development project typically takes 4-12 weeks. I prioritize rapid iteration and can often deliver an MVP or prototype within the first few weeks to validate ideas early.',
+      'The strongest fit is design-led digital work: startup product design, MVPs, landing pages, business websites, ecommerce stores, automations, dashboards, admin panels, and lightweight internal tools.',
   },
   {
-    question: 'Do you work with startups or only established companies?',
+    question: 'Which offer should I choose?',
     answer:
-      'I work with both startups and established companies. I have extensive experience helping early-stage startups validate their ideas through rapid prototyping, as well as working with larger organizations to improve existing products or build new features.',
+      'Choose the startup offer if you are shaping a product or MVP, the websites offer if you need a public site or store, and the automations offer if your team is losing time to repeated manual work.',
   },
   {
-    question: 'What is your design and development process?',
+    question: 'Can you handle both design and implementation?',
     answer:
-      'My process is collaborative and iterative. It typically includes: discovery and research, wireframing and prototyping, visual design, development, and testing. I believe in shipping early and often, gathering feedback, and continuously improving based on real user data.',
+      'Yes. I can work from strategy through UX/UI and implementation, or join for a narrower part of the process. The best fit is usually when design and build decisions can stay close together.',
   },
   {
-    question: 'Can you help with an existing project or product?',
+    question: 'What platforms and technologies do you use?',
     answer:
-      'Absolutely. I can jump into existing projects to help with design improvements, feature development, performance optimization, or technical debt reduction. I\'m experienced in working with various tech stacks and can adapt to your existing codebase and workflows.',
+      'I use modern design and build tools including Figma, React, Next.js, Tailwind, Shopify, Wix, no-code tools, automation platforms, and AI-assisted development workflows when they help the project move faster.',
   },
   {
-    question: 'Do you offer ongoing support after project completion?',
+    question: 'Can you improve an existing product, site, or workflow?',
     answer:
-      'Yes, I offer flexible support and maintenance packages after project launch. This can include bug fixes, feature enhancements, performance monitoring, and design updates. We can discuss a support plan that fits your needs and budget.',
+      'Yes. I can redesign pages, clean up UX, improve store flows, build new sections, connect missing workflows, or add internal tools without replacing everything that already works.',
   },
   {
-    question: 'What tools and technologies do you use?',
+    question: 'How long does a project take?',
     answer:
-      'I use modern tools and technologies including Figma for design, React and Next.js for development, and platforms like Webflow, Framer, and AI-powered tools for rapid prototyping. I also leverage no-code/low-code solutions when appropriate to ship faster without compromising quality.',
+      'A landing page or focused automation is usually 1-2 weeks. A business website is often 2-4 weeks. Ecommerce stores and internal tools are commonly 3-6 weeks depending on catalog size, integrations, content readiness, and custom logic.',
   },
   {
-    question: 'Design vs. Development: Can I hire you for just one?',
+    question: 'Can you improve an existing site or store?',
     answer:
-      'Absolutely. While my unique value lies in bridging the gap between design and code, I am happy to integrate with your existing setup. You can engage me solely for high-fidelity UI/UX design deliverables to hand off to your team, or hire me to build a pixel-perfect frontend from designs you already have.',
+      'Yes. I can redesign pages, clean up UX, improve product/category pages, add new sections, fix conversion weak spots, connect missing workflows, or rebuild the frontend while keeping the parts of the platform that still work.',
   },
   {
-    question: 'How do we communicate? Do we need meetings?',
+    question: 'Do you provide design only or development only?',
     answer:
-      'I prioritize asynchronous communication (via email, Slack, or project boards) to maximize focus time and delivery speed. However, I offer a complimentary 15-minute discovery call to discuss your needs, and I am always available to sync if a complex issue requires a direct conversation.',
+      'Yes. I can handle strategy and UX/UI only, implementation only from existing designs, or the full design-and-build process. The strongest fit is usually when design and build decisions can be made together.',
   },
   {
-    question: 'How does the monthly subscription/retainer work?',
+    question: 'What do I need before we start?',
     answer:
-      'The retainer is a recurring monthly subscription that guarantees my availability for your project. It is paid upfront at the start of each cycle. You can cancel the subscription at any time, effective for the following month. Because I reserve a dedicated block of time specifically for you, I cannot offer refunds once a billing cycle has started.',
+      'A clear business goal, examples of sites or tools you like, access to existing platforms if there are any, and rough content or product information are enough to start. If the content is incomplete, the first phase can include structure and copy guidance.',
   },
   {
-    question: 'Do you do websites as well?',
+    question: 'Do you offer support after launch?',
     answer:
-      'Yes. I design and build websites at any scale. Whether you need a single high-conversion landing page, a corporate marketing site, or a complex, data-rich e-commerce store, I use modern frameworks to ensure your site is fast, scalable, and manageable.',
+      'Yes. Support can include bug fixes, small improvements, analytics review, conversion tweaks, new pages, automation changes, and platform updates. For larger ongoing needs, we can define a monthly support scope.',
   },
 ];
 
@@ -69,11 +69,11 @@ export function FAQ() {
         {/* Section header */}
         <div className="mb-16 text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Frequently Asked Questions
+            Frequently asked questions
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Everything you need to know about working together. Can&apos;t find the
-            answer you&apos;re looking for? Feel free to book a call.
+            Practical answers about choosing the right offer, working together,
+            timelines, platforms, and what it takes to get started.
           </p>
         </div>
 

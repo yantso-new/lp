@@ -1,24 +1,47 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import { servicePages } from "@/lib/service-pages";
+import { ArrowRight, Globe2, Rocket, Workflow } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
-  title: "Product Design and MVP Services",
+  title: "Services",
   description:
-    "Explore product design, MVP build, frontend development, and design system services for startups and product teams.",
+    "Compare startup product design, website and ecommerce, and automation and internal tool services from Yaniv Tsoref.",
   alternates: {
     canonical: "/services",
   },
   openGraph: {
-    title: "Product Design and MVP Services",
+    title: "Services",
     description:
-      "Explore product design, MVP build, frontend development, and design system services for startups and product teams.",
+      "Compare startup product design, website and ecommerce, and automation and internal tool services from Yaniv Tsoref.",
     url: "/services",
     type: "website",
   },
 };
+
+const offers = [
+  {
+    href: "/startups",
+    icon: Rocket,
+    title: "For startups",
+    description:
+      "Fractional product design, MVP scope, UX/UI, design systems, and frontend implementation for early teams.",
+  },
+  {
+    href: "/websites",
+    icon: Globe2,
+    title: "Websites and ecommerce",
+    description:
+      "Landing pages, business websites, Shopify/Wix stores, and custom storefronts for clearer conversion paths.",
+  },
+  {
+    href: "/automations",
+    icon: Workflow,
+    title: "Automations and internal tools",
+    description:
+      "Workflow automations, CRM updates, dashboards, admin panels, portals, and staff-facing tools.",
+  },
+];
 
 export default function ServicesPage() {
   return (
@@ -29,30 +52,31 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-            Product design and build services for teams that need to ship.
+            Choose the path that matches the work.
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Focused services for startups, founders, and product teams that need
-            senior design judgment, polished interfaces, and practical frontend
-            execution.
+            Three focused offers cover the most common ways I help: shaping a
+            startup product, building a public website or store, or improving the
+            internal workflows that keep the business running.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-6 md:grid-cols-2">
-          {servicePages.map((service) => (
+        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+          {offers.map((offer) => (
             <Link
-              key={service.slug}
-              href={`/services/${service.slug}`}
+              key={offer.href}
+              href={offer.href}
               className="group rounded-lg border border-border/60 bg-background/60 p-6 transition-colors hover:border-foreground/30"
             >
+              <offer.icon className="mb-5 h-10 w-10 stroke-1 text-muted-foreground transition-colors group-hover:text-foreground" />
               <h2 className="text-2xl font-semibold tracking-tight">
-                {service.shortTitle}
+                {offer.title}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {service.promise}
+                {offer.description}
               </p>
               <span className="mt-6 inline-flex items-center text-sm font-medium">
-                View service
+                View offer
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </span>
             </Link>

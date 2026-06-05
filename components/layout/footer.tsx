@@ -8,9 +8,9 @@ export function Footer() {
             <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-16">
                     <div className="max-w-xl">
-                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">Connect with Me</h2>
+                        <h2 className="text-4xl sm:text-5xl font-bold mb-6 tracking-tight">Have a project in mind?</h2>
                         <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-                            Have something else in mind? I&apos;m always open to new projects and collaborations.
+                            Send a note about the product, website, store, automation, or internal tool you want to improve.
                         </p>
                         <Button
                             asChild

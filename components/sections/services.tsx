@@ -5,79 +5,30 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import {
-  Palette,
-  Code,
-  Rocket,
-  Smartphone,
-  Zap,
-  Layers,
-  Search,
-  BarChart3,
-  Users,
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight, Workflow, PanelsTopLeft, Rocket } from "lucide-react";
 import Link from "next/link";
 
 const services = [
   {
-    icon: Palette,
-    title: "UX/UI Design",
-    description:
-      "User research, wireframing, and pixel-perfect designs that balance aesthetics with functionality.",
-    href: "/services/ux-ui-design",
-  },
-  {
-    icon: Code,
-    title: "Frontend Development",
-    description:
-      "Building responsive, performant interfaces with React, Next.js, and modern web technologies.",
-    href: "/services/frontend-development",
-  },
-  {
     icon: Rocket,
-    title: "Rapid Prototyping",
+    title: "For startups",
     description:
-      "From concept to clickable prototype in days. Fast iteration to validate ideas before full build.",
-    href: "/services/mvp-build",
+      "Product design, MVP scope, UX/UI, frontend implementation, and design leadership for early teams.",
+    href: "/startups",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Design",
+    icon: PanelsTopLeft,
+    title: "Websites and ecommerce",
     description:
-      "Native and responsive mobile experiences that feel intuitive and delightful on any device.",
+      "Landing pages, business websites, Shopify/Wix stores, and custom storefronts that make the offer clearer.",
+    href: "/websites",
   },
   {
-    icon: Zap,
-    title: "Design Systems",
+    icon: Workflow,
+    title: "Automations and internal tools",
     description:
-      "Creating scalable design systems and component libraries for consistent, maintainable products.",
-    href: "/services/design-systems",
-  },
-  {
-    icon: Layers,
-    title: "No/Low-Code Solutions",
-    description:
-      "Leveraging platforms like Wix, Webflow, and AI tools to ship faster without compromising quality.",
-  },
-  {
-    icon: Search,
-    title: "User Research",
-    description:
-      "Understanding user needs through interviews, testing, and data analysis to inform design decisions.",
-  },
-  {
-    icon: BarChart3,
-    title: "Product Strategy",
-    description:
-      "Helping define product vision, roadmap, and features that align with business goals.",
-  },
-  {
-    icon: Users,
-    title: "Design Lead",
-    description:
-      "Leading design teams, establishing design processes, and driving design excellence across products and organizations.",
-    href: "/services/fractional-product-designer",
+      "Lead routing, CRM updates, dashboards, admin panels, portals, and workflow cleanup for daily operations.",
+    href: "/automations",
   },
 ];
 
@@ -107,19 +58,13 @@ export function Services() {
         {/* Section header */}
         <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Services
+            Three focused ways to work together
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            End-to-end design and development services to bring your product
-            vision to life. From research to launch, I help you ship faster.
+            Choose the path that matches the problem in front of you: a product
+            to shape, a public site or store to improve, or an internal workflow
+            that needs to become easier to run.
           </p>
-          <Link
-            href="/services"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-muted-foreground"
-          >
-            View all product design services
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </Link>
         </div>
 
         {/* Services Grid */}
@@ -127,7 +72,7 @@ export function Services() {
           {services.map((service) => {
             const card = (
               <Card
-                className="group h-full border-transparent bg-background/60 backdrop-blur-sm p-0 gap-0 transition-all hover:shadow-md"
+                className="group flex h-full border border-transparent bg-card p-8 gap-0 transition-all hover:border-border hover:bg-card/90 hover:shadow-md"
               >
                 <CardHeader className="pb-2 px-0">
                   <div className="mb-3 flex items-center justify-start">
@@ -135,16 +80,20 @@ export function Services() {
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0 px-0">
+                <CardContent className="flex flex-1 flex-col pt-0 px-0">
                   <CardDescription className="text-sm leading-relaxed">
                     {service.description}
                   </CardDescription>
+                  <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-md border border-border/70 px-3 py-2 text-sm font-medium text-foreground transition-colors group-hover:border-foreground/40 group-hover:bg-foreground group-hover:text-background">
+                    Explore
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
                 </CardContent>
               </Card>
             );
 
             return service.href ? (
-              <Link key={service.title} href={service.href}>
+              <Link key={service.title} href={service.href} className="block h-full">
                 {card}
               </Link>
             ) : (

@@ -7,65 +7,71 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Check, ArrowRight, MessageSquare, Rocket, Sparkles, Circle } from "lucide-react";
+import {
+  Check,
+  ArrowRight,
+  Rocket,
+  Globe2,
+  Workflow,
+  Circle,
+} from "lucide-react";
 
 const pricingTiers = [
   {
-    name: "1:1 Consultation",
+    name: "Startup design and MVPs",
     price: "€300",
-    priceType: "per session",
-    description: "Expert guidance on design, strategy, and product decisions",
-    duration: "60 minutes",
-    icon: MessageSquare,
+    priceType: "from",
+    description: "Product design support from strategy call to MVP build",
+    duration: "sessions, retainers, or builds",
+    icon: Rocket,
     features: [
-      "Product strategy & roadmap review",
-      "Design critique & feedback",
-      "UX/UI best practices",
-      "Technical architecture guidance",
-      "No/low-code platform recommendations",
-      "Actionable next steps",
-      "8-session pack: €2000 (prepaid)",
+      "UX/UI design and product strategy",
+      "MVP scope and prototype planning",
+      "Frontend implementation with Next.js",
+      "Design systems and product cleanup",
+      "Fractional design leadership",
+      "Focused startup service packages",
     ],
-    cta: "Book a session",
+    cta: "Explore startup offer",
+    href: "/startups",
     popular: false,
   },
   {
-    name: "Design Lead as a Service",
-    price: "€3000",
-    priceType: "per month",
-    description: "Ongoing design leadership for your product team",
-    duration: "Monthly retainer",
-    icon: Sparkles,
+    name: "Websites and ecommerce",
+    price: "€3,500",
+    priceType: "from",
+    description: "Landing pages, business websites, Shopify/Wix, and storefronts",
+    duration: "1-6 weeks by scope",
+    icon: Globe2,
     features: [
-      "20 hours/month design leadership",
-      "Max 2 clients per month",
-      "Design system maintenance",
-      "Feature design & reviews",
-      "Ongoing design guidance",
-      "Design process optimization",
-      "Priority support",
-      "Flexible cancellation",
+      "Landing page and website builds",
+      "Shopify and Wix setup or redesign",
+      "Custom Next.js storefront option",
+      "Product and service page structure",
+      "Conversion-focused UX",
+      "SEO-ready launch foundations",
     ],
-    cta: "Get started",
+    cta: "Explore website offer",
+    href: "/websites",
     popular: true,
   },
   {
-    name: "MVP Build",
-    price: "€6000",
-    priceType: "starting from",
-    description: "Design-led MVP from concept to launch",
-    duration: "3-5 weeks",
-    icon: Rocket,
+    name: "Automations and tools",
+    price: "€1,200",
+    priceType: "from",
+    description: "Workflow automations, dashboards, admin panels, and portals",
+    duration: "1-5 weeks by scope",
+    icon: Workflow,
     features: [
-      "UX research & user flows",
-      "Complete UI design",
-      "Design system & components",
-      "Frontend development (Next.js)",
-      "Responsive implementation",
-      "2 rounds of revisions",
-      "Design handoff & documentation",
+      "Lead routing and CRM updates",
+      "Forms, notifications, and reporting",
+      "Internal dashboards and admin tools",
+      "Lightweight portals and staff tools",
+      "Workflow mapping and QA",
+      "Team documentation",
     ],
-    cta: "Start your MVP",
+    cta: "Explore automation offer",
+    href: "/automations",
     popular: false,
   },
 ];
@@ -81,11 +87,11 @@ export function Pricing() {
         {/* Section header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Pricing
+            Pick the offer that matches the job
           </h2>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Flexible options for every stage of your product journey. From quick
-            consultations to full MVP builds and ongoing design leadership.
+            Each path has its own landing page with packages, examples, and
+            starting points. Start broad here, then choose the page that fits.
           </p>
         </div>
 
@@ -96,7 +102,7 @@ export function Pricing() {
             return (
               <Card
                 key={tier.name}
-                className={`group relative flex flex-col bg-background/60 backdrop-blur-sm transition-all hover:border-border hover:shadow-lg ${tier.popular
+                className={`group relative flex flex-col bg-card backdrop-blur-sm transition-all hover:border-border hover:shadow-lg ${tier.popular
                   ? "border-primary/20 shadow-md lg:scale-105"
                   : "border-border/50"
                   }`}
@@ -105,7 +111,7 @@ export function Pricing() {
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                     <Badge variant="outline" className="px-3 py-1 bg-white text-black flex items-center gap-1.5">
                       <Circle className="h-2 w-2 fill-green-500 text-green-500" />
-                      2 spots available
+                      Common starting point
                     </Badge>
                   </div>
                 )}
@@ -149,7 +155,7 @@ export function Pricing() {
                     variant={tier.popular ? "default" : "outline"}
                     className="w-full group/btn"
                   >
-                    <a href="#contact">
+                    <a href={tier.href}>
                       {tier.cta}
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </a>
@@ -167,10 +173,10 @@ export function Pricing() {
               <div className="flex-1">
                 <h3 className="mb-2 text-xl font-semibold">Custom Project</h3>
 	                <p className="text-sm text-muted-foreground">
-	                  Have a complex product, enterprise needs, or something unique?
+	                  Need a mixed product, website, ecommerce, automation, or tooling scope?
 	                  <br />
-	                  Let&apos;s discuss a tailored solution that fits your specific
-	                  requirements and timeline.
+	                  We&apos;ll shape a practical plan around the business outcome,
+	                  platform, timeline, and budget.
 	                </p>
               </div>
               <Button asChild variant="outline" className="group/btn shrink-0">

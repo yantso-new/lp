@@ -5,7 +5,7 @@ import { ImageResponse } from "next/og";
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "Yaniv Tsoref | Fractional Product Designer & MVP Builder";
+export const alt = "Yaniv Tsoref | Product Designer & Builder";
 export const size = {
     width: 1200,
     height: 630,
@@ -84,7 +84,7 @@ export default async function Image() {
                         maxWidth: "800px",
                     }}
                 >
-                    Fractional Product Designer & MVP Builder
+                    Product design, websites, ecommerce & useful tools
                 </p>
             </div>
         ),
