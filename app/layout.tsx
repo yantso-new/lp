@@ -16,21 +16,39 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yantso.com"),
-  title: "Yaniv Tsoref | Fractional Product Designer & Builder",
-  description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
+  metadataBase: new URL("https://www.yantso.com"),
+  title: {
+    default: "Yaniv Tsoref | Product Designer & Builder",
+    template: "%s | Yaniv Tsoref",
+  },
+  description:
+    "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Yaniv Tsoref | Fractional Product Designer & Builder",
-    description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
-    url: "https://yantso.com",
+    title: "Yaniv Tsoref | Product Designer & Builder",
+    description:
+      "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
+    url: "https://www.yantso.com",
     siteName: "Yaniv Tsoref",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Yaniv Tsoref | Product Designer & Builder",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yaniv Tsoref | Fractional Product Designer & Builder",
-    description: "I design and build beautiful products. Crafting thoughtful digital experiences that blend aesthetics with functionality.",
+    title: "Yaniv Tsoref | Product Designer & Builder",
+    description:
+      "Product designer and builder helping teams ship polished products, websites, ecommerce experiences, automations, and internal tools.",
+    images: ["/opengraph-image"],
   },
 };
 

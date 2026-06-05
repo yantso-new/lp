@@ -9,13 +9,12 @@ export function About() {
         {/* Section header */}
         <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            About me
+            Design judgment with build momentum
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Product designer based in Portugal who ships end‑to‑end using
-            no/low‑code platforms and AI‑assisted tooling. The focus is fast
-            iteration from idea to usable product, combining UX rigor with
-            pragmatic build workflows.
+            Product designer based in Portugal who works across UX, UI, websites,
+            ecommerce, automations, and internal tools. The focus is clear scope,
+            practical delivery, and digital experiences that are ready for real use.
           </p>
         </div>
 
@@ -26,7 +25,8 @@ export function About() {
               Design first
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Research, UX/UI, and design systems tailored to your product goals.
+              Research, UX/UI, and interface systems tailored to the problem,
+              audience, and business goal.
             </p>
           </div>
 
@@ -35,8 +35,8 @@ export function About() {
               Build with leverage
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Assemble using Next.js or no/low‑code where it fits, with AI tools
-              like Cursor to accelerate implementation.
+              Next.js, Shopify, Wix, no-code tools, and light custom code are
+              selected by fit, speed, maintainability, and budget.
             </p>
           </div>
 
@@ -45,7 +45,8 @@ export function About() {
               Rapid delivery
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Go from brief to clickable prototype or live MVP in days, not weeks.
+              Go from brief to clickable prototype, launch page, store, or tool
+              in focused phases instead of dragging scope for months.
             </p>
           </div>
 
@@ -54,18 +55,18 @@ export function About() {
               Partner mindset
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              With founders and product teams; clear scope, tight feedback loops,
-              and visible progress.
+              Clear scope, tight feedback loops, visible progress, and a setup
+              your team can understand after launch.
             </p>
           </div>
 
           <div className="break-inside-avoid border-b border-border pb-8">
             <h3 className="mb-3 text-lg font-semibold tracking-tight">
-              Prototype → validate → ship
+              Prototype, validate, ship
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              Quick tests, real signals, and clean handoff—or full build via
-              no/low‑code + light code glue.
+              Quick tests, real signals, and clean handoff, or full build via a
+              practical mix of design, code, and platform tooling.
             </p>
           </div>
 
@@ -74,8 +75,8 @@ export function About() {
               Focus areas
             </h3>
             <p className="text-muted-foreground leading-relaxed">
-              SaaS & internal tools, wellness & yoga tech, and AI‑assisted
-              workflows.
+              Startups, websites, ecommerce, internal tools, wellness tech,
+              payments, CRM, and AI-assisted workflows.
             </p>
           </div>
         </div>
@@ -83,4 +84,3 @@ export function About() {
     </section>
   );
 }
-

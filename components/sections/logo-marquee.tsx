@@ -41,7 +41,7 @@ const logos: Logo[] = [
     className: "h-6 sm:h-7",
   },
   {
-    name: "Logo Wrapper",
+    name: "Nanit",
     src: "/logos/64be785cd906a1580880ee97_Logo Wrapper-5.png",
     width: 120,
     height: 40,
@@ -80,7 +80,7 @@ export function LogoMarquee({ className }: LogoMarqueeProps) {
       <div className="relative flex flex-col items-center">
         {/* Heading */}
         <p className="mb-12 text-center text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground/60 sm:text-sm">
-          Trusted by
+          Experience across ecommerce, payments, SaaS, and operations
         </p>
 
         {/* Marquee Container */}

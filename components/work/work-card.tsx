@@ -12,6 +12,7 @@ import {
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface WorkProject {
   id: string;
@@ -21,6 +22,9 @@ export interface WorkProject {
   image: string;
   variant: "light" | "dark";
   highlight?: string;
+  href?: string;
+  ctaLabel?: string;
+  external?: boolean;
 }
 
 interface WorkCardProps {
@@ -80,28 +84,65 @@ export function WorkCard({ project, className }: WorkCardProps) {
 
           {/* Overlay with CTA */}
           <div className="absolute inset-0 flex items-end justify-center bg-black/60 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-            <Button
-              className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
-              disabled
-            >
-              Case Study Coming Soon
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            {project.href ? (
+              <Button
+                asChild
+                className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
+              >
+                {project.external ? (
+                  <a href={project.href} target="_blank" rel="noopener noreferrer">
+                    {project.ctaLabel ?? "Visit site"}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <Link href={project.href}>
+                    {project.ctaLabel ?? "Read case study"}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
+              </Button>
+            ) : (
+              <Button
+                className="gap-2 rounded-full bg-background text-foreground shadow-lg transition-transform hover:bg-muted"
+                disabled
+              >
+                Project details on request
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            )}
           </div>
 
           {/* Always visible CTA on touch devices */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform md:hidden">
-            <Button
-              className="gap-2 rounded-full bg-background text-foreground shadow-lg"
-              disabled
-            >
-              Coming Soon
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            {project.href ? (
+              <Button
+                asChild
+                className="gap-2 rounded-full bg-background text-foreground shadow-lg"
+              >
+                {project.external ? (
+                  <a href={project.href} target="_blank" rel="noopener noreferrer">
+                    {project.ctaLabel ?? "Visit site"}
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                ) : (
+                  <Link href={project.href}>
+                    {project.ctaLabel ?? "Case study"}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
+              </Button>
+            ) : (
+              <Button
+                className="gap-2 rounded-full bg-background text-foreground shadow-lg"
+                disabled
+              >
+                Details on request
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            )}
           </div>
         </div>
       </CardContent>
     </Card>
   );
 }
-

@@ -21,10 +21,11 @@ export function Contact() {
         {/* Section header */}
         <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Let's work together
+            Let&apos;s plan the right scope
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            Book a call to discuss your project. Choose a time that works for you.
+            Book a call to talk through the goal, audience, scope, timeline, and
+            the simplest way to get the work live.
           </p>
         </div>
 
@@ -41,4 +42,3 @@ export function Contact() {
     </section>
   );
 }
-

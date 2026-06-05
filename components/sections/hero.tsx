@@ -35,36 +35,32 @@ export function Hero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
           </span>
-          Available for new projects
+          Designer and builder for digital products
         </div>
 
         {/* Headline */}
         <h1 className="mb-6 text-4xl font-semibold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-          I turn fuzzy ideas
-          <br className="hidden sm:inline" /> into beautiful, live products.
+          Product design, websites
+          <br className="hidden sm:inline" /> and useful tools
         </h1>
 
         {/* Subheadline */}
         <p className="mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-          Crafting thoughtful digital experiences that blend aesthetics with
-          functionality. From concept to launch, I help startups and businesses
-          bring their vision to life.
+          I help founders and small teams turn fuzzy ideas, services, and
+          workflows into polished interfaces, launch-ready websites, and tools
+          people can actually use.
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col gap-4 sm:flex-row">
           <Button asChild size="lg" className="group">
             <a href="#contact">
-              Book Free Discovery Call
+              Book a discovery call
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <a href="#pricing">See Pricing & Packages</a>
           </Button>
         </div>
       </div>
     </section>
   );
 }
-
