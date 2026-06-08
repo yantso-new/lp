@@ -12,7 +12,7 @@ export function Work() {
         {/* Section Header */}
         <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Proof from products, stores, and workflows
+            This is how we build success
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Experience across payments, ecommerce, CRM, healthtech, dashboards,

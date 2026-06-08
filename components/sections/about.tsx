@@ -9,7 +9,7 @@ export function About() {
         {/* Section header */}
         <div className="mb-16 mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Design judgment with build momentum
+            Design-driven end-to-end product development for success
           </h2>
           <p className="text-lg leading-relaxed text-muted-foreground sm:text-xl">
             Product designer based in Portugal who works across UX, UI, websites,
