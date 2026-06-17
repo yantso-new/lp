@@ -24,6 +24,12 @@ export function Footer() {
                     </div>
 
                     <div className="flex flex-col gap-6 items-start md:items-end w-full md:w-auto">
+                        <p className="max-w-xs text-sm leading-relaxed text-muted-foreground md:text-right">
+                            Yaniv Tsoref · Lagos, Portugal ·{" "}
+                            <a href="mailto:hello@yantso.com" className="hover:text-foreground transition-colors">
+                                hello@yantso.com
+                            </a>
+                        </p>
                         <a
                             href="https://www.linkedin.com/in/yanivtsoref/"
                             target="_blank"

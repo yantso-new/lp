@@ -67,6 +67,39 @@ const structuredData = [
   },
   {
     "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteUrl}/#local-business`,
+    name: "Yaniv Tsoref",
+    url: siteUrl,
+    image: `${siteUrl}/opengraph-image`,
+    email: "hello@yantso.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Lagos",
+      addressCountry: "PT",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Lagos, Portugal",
+    },
+    founder: {
+      "@id": `${siteUrl}/#person`,
+    },
+    sameAs: [
+      "https://www.linkedin.com/in/yanivtsoref/",
+      "https://dribbble.com/yantso",
+    ],
+    serviceType: [
+      "Web Design",
+      "Business Website Design",
+      "Landing Page Design",
+      "Ecommerce Store Design and Development",
+      "Product Design",
+    ],
+    priceRange: "€€€",
+  },
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
       {
@@ -102,7 +135,9 @@ export default function Home() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
       />
       <Navbar />
       <main>
