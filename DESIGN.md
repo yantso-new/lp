@@ -18,10 +18,15 @@ Editorial link: `.editorial-link`, with hover/focus-visible underline. Editorial
 `BlogHeader` composes editorial navigation links. `ArticleRow` composes the row link, title, excerpt and publication metadata. `ArticleBody` renders Portable Text with the documented rich-text styles. Empty blog copy announces upcoming articles. Loading and failure states use plain editorial feedback; CMS errors must not masquerade as an empty blog.
 
 ## Accessibility and content
-Keep strong foreground contrast, visible keyboard focus, semantic heading order (article title is the only H1), and readable line lengths. Images require alt text in Studio. Dates use English and UTC to keep output consistent. Do not create sample published articles. Public queries only show published articles with publication dates at or before now.
+Keep strong foreground contrast, visible keyboard focus, semantic heading order (article title is the only H1), and readable line lengths. Images require alt text in Studio. Dates use English and UTC to keep output consistent. Publish authored articles only when requested. The five authored articles are version-controlled in `content/design-system-basics.ts` and `content/design-refinement.ts`; a published CMS entry with the same slug takes precedence. CMS failures remain visible. Public queries only show published articles with publication dates at or before now.
 
 ## Anti-patterns
 No new palettes, gradients, decorative cards, artificial article counts, or animations for long-form reading. No CMS configuration details on public blog pages.
 
 ## Change log
 - 2026-10-07: Documented existing foundations and added editorial primitives for blog and CMS connection feedback. Visual examples live at `/design-system` (noindex).
+
+## Article composition
+Article headers retain the 44rem reading measure. `.article-cover-wide` spans the editorial shell with a 2:1 desktop crop and a 3:2 mobile crop. `.article-layout` places a 15rem sticky contents navigation beside the 44rem body on desktop and stacks it above the body on smaller screens. Contents links have 44px targets; section headings preserve anchor offsets. Publication metadata includes an estimated reading time (200 words per minute). Use existing neutral tokens, media radius, and typography throughout.
+
+- 2026-10-16: Added the first authored design-system article, wide cover composition, reading-time metadata, and responsive contents navigation.
