@@ -1,4 +1,5 @@
 import type { Article } from "@/sanity/lib/articles";
+import { articleCovers } from "./article-covers";
 
 function makeArticle(slug: string, title: string, excerpt: string, hour: string, sections: [string, string[]][]): Article {
   return {
@@ -8,8 +9,8 @@ function makeArticle(slug: string, title: string, excerpt: string, hour: string,
     slug, title, excerpt,
     author: { name: "Yaniv Tsoref" },
     categories: [{ _id: "design-process", title: "Design process" }],
-    coverSrc: "/blog/design-system-basics.png",
-    coverAlt: "Neutral paper specimens, swatches and modular blocks arranged as a physical design toolkit.",
+    coverSrc: articleCovers[slug].src,
+    coverAlt: articleCovers[slug].alt,
     body: sections.flatMap(([heading, paragraphs], index) => [
       ...(heading ? [{ _type: "block" as const, _key: `heading${index}`, style: "h2", markDefs: [], children: [{ _type: "span" as const, _key: `headingText${index}`, text: heading, marks: [] }] }] : []),
       ...paragraphs.map((text, paragraph) => ({ _type: "block" as const, _key: `section${index}paragraph${paragraph}`, style: "normal", markDefs: [], children: [{ _type: "span" as const, _key: `text${index}paragraph${paragraph}`, text, marks: [] }] })),

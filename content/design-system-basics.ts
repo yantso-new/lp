@@ -1,4 +1,5 @@
 import type { Article } from "@/sanity/lib/articles";
+import { articleCovers } from "./article-covers";
 
 const paragraph = (key: string, text: string, style = "normal"): Article["body"][number] => ({
   _type: "block", _key: key, style, markDefs: [],
@@ -13,8 +14,8 @@ export const designSystemBasics: Article = {
   slug: "how-to-create-a-design-system",
   excerpt: "A practical guide to turning a few good design decisions into a consistent system, with an LLM as your thinking partner.",
   publishedAt: "2026-10-16T09:00:00.000Z",
-  coverSrc: "/blog/design-system-basics.png",
-  coverAlt: "Ivory paper specimens, neutral swatches and modular graphite blocks arranged on a charcoal tabletop.",
+  coverSrc: articleCovers["how-to-create-a-design-system"].src,
+  coverAlt: articleCovers["how-to-create-a-design-system"].alt,
   author: { name: "Yaniv Tsoref" },
   categories: [{ _id: "design-systems", title: "Design systems" }, { _id: "basics", title: "The basics" }],
   body: [
