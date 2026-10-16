@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -51,6 +52,7 @@ export function Footer() {
 
                 <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
                     <p>© Copyright 2026. All rights Reserved.</p>
+                    <Link href="/blog" className="editorial-link">Blog</Link>
                     <p>Designed & Built by Yaniv Tsoref</p>
                 </div>
             </div>
