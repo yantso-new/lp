@@ -90,6 +90,8 @@ publication date has arrived appear on the website. A future date hides an
 already-published article until that date; it does not automatically publish a
 draft. Sanity publication and draft scheduling are separate operations.
 
+Public blog reads use Sanity's API CDN and carry the `portfolio-blog.article-list`
+or `portfolio-blog.article-detail` request tag for traffic diagnostics.
 Content is cached with a 60-second revalidation interval. Refresh requests after
 that interval trigger regeneration, so changes may require a subsequent refresh
 to appear. New article URLs do not require rebuilding the site. Published articles

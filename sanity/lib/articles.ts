@@ -38,10 +38,10 @@ const articleQuery = defineQuery(`*[${publishedFilter} && slug.current == $slug]
 
 export const getArticles = cache(async (): Promise<ArticleSummary[]> => {
   if (!client) return [];
-  return client.fetch(articlesQuery, {}, { next: { revalidate: 60 } });
+  return client.fetch(articlesQuery, {}, { tag: "article-list", next: { revalidate: 60 } });
 });
 
 export const getArticle = cache(async (slug: string): Promise<Article | null> => {
   if (!client) return null;
-  return client.fetch(articleQuery, { slug }, { next: { revalidate: 60 } });
+  return client.fetch(articleQuery, { slug }, { tag: "article-detail", next: { revalidate: 60 } });
 });
