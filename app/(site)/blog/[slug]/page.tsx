@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { BlogHeader } from "@/components/blog/blog-header";
 import { ArticleBody, articleHeadingId } from "@/components/blog/article-body";
 import { articleDate } from "@/components/blog/article-row";
 import { getArticle } from "@/sanity/lib/articles";
@@ -43,7 +42,6 @@ export default async function ArticlePage({ params }: Props) {
   };
   return (
     <main className="editorial-shell">
-      <BlogHeader />
       <article>
         <header className="editorial-reading">
         <p className="editorial-eyebrow">{article.categories?.filter(Boolean).map((category) => category.title).join(" · ") || "Notes"}</p>

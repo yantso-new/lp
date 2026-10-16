@@ -192,8 +192,6 @@ cal-inline iframe {
 /* Editorial primitives — documented in DESIGN.md. */
 .editorial-shell { max-width: 72rem; margin-inline: auto; padding: 6rem 1rem; }
 .editorial-reading { max-width: 44rem; margin-inline: auto; }
-.editorial-header { display: flex; justify-content: space-between; gap: 1.5rem; margin-bottom: 5rem; }
-.editorial-header a { display: inline-flex; align-items: center; min-height: 44px; }
 .editorial-eyebrow { color: var(--muted-foreground); font-size: .875rem; margin-bottom: 1rem; }
 .editorial-title { font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 600; line-height: 1.1; letter-spacing: -.04em; text-wrap: balance; overflow-wrap: anywhere; }
 .editorial-intro { color: var(--muted-foreground); font-size: 1.125rem; line-height: 1.7; max-width: 44rem; margin-top: 1.5rem; }

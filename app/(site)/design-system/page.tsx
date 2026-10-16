@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BlogHeader } from "@/components/blog/blog-header";
+import { Navbar } from "@/components/layout/navbar";
 
 export const metadata: Metadata = { title: "Design foundations", robots: { index: false, follow: false } };
 
 export default function DesignSystemPage() {
-  return <main className="editorial-shell editorial-stack">
-    <BlogHeader />
+  return <><Navbar /><main className="editorial-shell editorial-stack">
     <h1 className="editorial-title">Design foundations</h1>
     <p className="editorial-intro">The dark portfolio and editorial system. Implementation rules are in DESIGN.md. Controls use the existing Radix-backed Button primitive.</p>
     <section className="editorial-stack"><h2 className="text-2xl font-semibold">Live tokens</h2><div className="flex flex-wrap gap-6">{["background", "foreground", "muted", "muted-foreground", "border", "ring"].map((token) => <div key={token}><div className="h-16 w-24 rounded-lg border" style={{ background: `var(--${token})` }} /><p className="mt-2 text-sm">--{token}</p></div>)}</div></section>
@@ -16,5 +15,5 @@ export default function DesignSystemPage() {
     <section id="feedback" className="editorial-empty"><h2 className="text-2xl font-semibold">Empty state</h2><p className="editorial-intro">First articles coming soon.</p><p className="editorial-intro" role="status">Loading articles…</p><p className="editorial-intro">Error: The blog is temporarily unavailable.</p></section>
     <section className="editorial-stack"><h2 className="text-2xl font-semibold">Article composition</h2><p className="editorial-intro">Wide cover media, a 44rem reading column, and contents navigation that stacks on mobile. Dates and estimated reading times use the metadata style.</p><div className="editorial-meta"><time dateTime="2026-10-16">October 16, 2026</time><span>5 min read</span></div><Link className="editorial-link" href="/blog/how-to-create-a-design-system">View the complete article example →</Link></section>
     <section className="article-body editorial-reading"><h2>Rich-text composition</h2><p>Readable body copy, with <a href="#feedback">an inline link</a> and <code>inline code</code>.</p><blockquote>Quotes use a simple border and muted text.</blockquote><ul><li>Lists preserve semantic markers.</li><li>Rows and content wrap on mobile.</li></ul></section>
-  </main>;
+  </main></>;
 }

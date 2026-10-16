@@ -8,14 +8,14 @@ Source: `app/globals.css` and its Tailwind theme. Background `--background: oklc
 Geist Sans is the body and heading family; Geist Mono is for code. Editorial title: responsive 2.25–3.75rem, weight 600, line-height 1.1, tracking -0.04em. Intro: 1.125rem / 1.7. Body: 1.125rem / 1.85, maximum 44rem. Metadata: 0.875rem. Use a 0.25rem spacing unit, 1–2rem gutters, 6–8rem section padding, and 1.5rem paragraph gaps. Media radius uses `--radius`. Borders provide separation; avoid new shadows. Links transition color over 150ms and show an underlined focus state; respect reduced motion.
 
 ## Layout primitives
-`.editorial-shell`: centered 72rem shell with responsive gutters. `.editorial-reading`: 44rem reading column. `.editorial-header`: horizontal home/blog navigation. `.editorial-stack`: vertical flow. Rows wrap metadata and titles rather than overflowing. Touch navigation targets are at least 44px tall.
+`.editorial-shell`: centered 72rem shell with responsive gutters. `.editorial-reading`: 44rem reading column. `.editorial-stack`: vertical flow. Rows wrap metadata and titles rather than overflowing. Touch navigation targets are at least 44px tall.
 
 ## Component primitives
 Existing `components/ui/button.tsx`: Radix Slot backed primary, secondary, outline, ghost, destructive and link buttons. Existing Card, Badge, Separator, Sheet and Accordion retain their established tokens and APIs.
 Editorial link: `.editorial-link`, with hover/focus-visible underline. Editorial empty state: `.editorial-empty`, bordered text panel. Article row: `.article-row`, a full linked row separated by borders. Rich text: `.article-body`, styled headings, paragraphs, lists, code, quotes, figures and links. Media uses Next Image with descriptive alt text.
 
 ## Feature components
-`BlogHeader` composes editorial navigation links. `ArticleRow` composes the row link, title, excerpt and publication metadata. `ArticleBody` renders Portable Text with the documented rich-text styles. Empty blog copy announces upcoming articles. Loading and failure states use plain editorial feedback; CMS errors must not masquerade as an empty blog.
+The blog index, articles, and error state use the shared `Navbar` through the blog layout. The design-system page displays the same fixed site header, desktop links, project CTA, and mobile menu. Editorial shell top padding clears the fixed header. `ArticleRow` composes the row link, title, excerpt and publication metadata. `ArticleBody` renders Portable Text with the documented rich-text styles. Empty blog copy announces upcoming articles. Loading and failure states use plain editorial feedback; CMS errors must not masquerade as an empty blog.
 
 ## Accessibility and content
 Keep strong foreground contrast, visible keyboard focus, semantic heading order (article title is the only H1), and readable line lengths. Images require alt text in Studio. Dates use English and UTC to keep output consistent. Publish authored articles only when requested. The five authored articles are version-controlled in `content/design-system-basics.ts` and `content/design-refinement.ts`; a published CMS entry with the same slug takes precedence. CMS failures remain visible. Public queries only show published articles with publication dates at or before now.

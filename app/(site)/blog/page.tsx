@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { BlogHeader } from "@/components/blog/blog-header";
 import { ArticleRow } from "@/components/blog/article-row";
 import { getArticles } from "@/sanity/lib/articles";
 
@@ -15,7 +14,6 @@ export default async function BlogPage() {
   const articles = await getArticles();
   return (
     <main className="editorial-shell">
-      <BlogHeader />
       <p className="editorial-eyebrow">The blog</p>
       <h1 className="editorial-title">Notes on design & building.</h1>
       <p className="editorial-intro">Ideas, lessons, and practical thinking from working on digital products and the websites that bring them to life.</p>
