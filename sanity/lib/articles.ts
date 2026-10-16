@@ -3,6 +3,10 @@ import { cache } from "react";
 import { defineQuery } from "next-sanity";
 import type { PortableTextBlock } from "@portabletext/react";
 import { client } from "./client";
+import { designSystemBasics } from "@/content/design-system-basics";
+import { designRefinementArticles } from "@/content/design-refinement";
+
+const localArticles = [...designRefinementArticles, designSystemBasics];
 
 export type BlogImage = {
   _type: "image";
@@ -22,6 +26,8 @@ export type Article = {
   excerpt: string;
   publishedAt: string;
   coverImage?: BlogImage;
+  coverSrc?: string;
+  coverAlt?: string;
   author: { name: string; bio?: string } | null;
   categories: { _id: string; title: string }[];
   seoTitle?: string;
@@ -37,11 +43,20 @@ const articlesQuery = defineQuery(`*[${publishedFilter}] | order(publishedAt des
 const articleQuery = defineQuery(`*[${publishedFilter} && slug.current == $slug][0] {${summaryFields}, body, seoTitle, seoDescription}`);
 
 export const getArticles = cache(async (): Promise<ArticleSummary[]> => {
-  if (!client) return [];
-  return client.fetch(articlesQuery, {}, { tag: "article-list", next: { revalidate: 60 } });
+  const articles: ArticleSummary[] = client
+    ? await client.fetch(articlesQuery, {}, { tag: "article-list", next: { revalidate: 60 } })
+    : [];
+  for (const localArticle of localArticles) {
+    if (!articles.some((article) => article.slug === localArticle.slug)) {
+      articles.push(localArticle);
+    }
+  }
+  return articles.sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
 });
 
 export const getArticle = cache(async (slug: string): Promise<Article | null> => {
-  if (!client) return null;
-  return client.fetch(articleQuery, { slug }, { tag: "article-detail", next: { revalidate: 60 } });
+  const article: Article | null = client
+    ? await client.fetch(articleQuery, { slug }, { tag: "article-detail", next: { revalidate: 60 } })
+    : null;
+  return article ?? localArticles.find((localArticle) => localArticle.slug === slug) ?? null;
 });

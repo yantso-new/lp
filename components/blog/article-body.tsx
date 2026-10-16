@@ -3,7 +3,14 @@ import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import type { Article, BlogImage } from "@/sanity/lib/articles";
 import { imageUrl } from "@/sanity/lib/image";
 
+export function articleHeadingId(key: string) {
+  return `section-${key}`;
+}
+
 const components: PortableTextComponents = {
+  block: {
+    h2: ({ value, children }) => <h2 id={articleHeadingId(value._key || "")}>{children}</h2>,
+  },
   types: {
     image: ({ value }: { value: BlogImage }) => {
       const src = imageUrl(value);
