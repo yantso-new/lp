@@ -1,7 +1,10 @@
 import type { MetadataRoute } from "next";
+import { getArticles } from "@/sanity/lib/articles";
+
+export const revalidate = 60;
 const siteUrl = "https://www.yantso.com";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
@@ -53,5 +56,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return staticPages;
+  const articles = await getArticles();
+  return [
+    ...staticPages,
+    { url: `${siteUrl}/blog`, changeFrequency: "weekly", priority: 0.7 },
+    ...articles.map((article) => ({ url: `${siteUrl}/blog/${article.slug}`, lastModified: new Date(article._updatedAt), changeFrequency: "monthly" as const, priority: 0.6 })),
+  ];
 }
